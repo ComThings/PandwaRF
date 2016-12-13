@@ -1,0 +1,6 @@
+The original rfcat script has been modified to work with PandwaRF board.
+
+The modification are:
+- Specan: move specan start/stop message from APP_NIC to APP_SPECAN
+- Specan: change SPECAN_QUEUE command from 1 to 0x43
+- Add USB VID/PID for PandwaRF (0x1d50/0x60ff)
