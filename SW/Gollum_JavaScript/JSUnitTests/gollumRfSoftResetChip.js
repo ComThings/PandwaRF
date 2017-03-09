@@ -1,0 +1,7 @@
+function main()
+{
+  gollumRfResetRadioChip();
+}
+
+
+main();

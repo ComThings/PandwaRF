@@ -1,0 +1,6 @@
+function main(){
+	
+	gollumRfPing();
+}
+
+main();
