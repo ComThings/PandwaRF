@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_scan"
+            android:icon="@drawable/ic_fragment_ble_device"
+            android:title="scan" />
+        <item
+            android:id="@+id/nav_specAn"
+            android:icon="@drawable/ic_fragment_specan"
+            android:title="SpecAN" />
+
+    </group>
+    <item android:title="others" >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/disconnect"
+                    android:icon="@drawable/connected_0"
+                    android:title="disconnect" />
+
+            </group>
+        </menu>
+    </item>
+
+
+
+</menu>

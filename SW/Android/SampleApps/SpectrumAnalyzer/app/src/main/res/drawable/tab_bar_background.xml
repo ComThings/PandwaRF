@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- SELECTED TAB STATE -->
+    <item android:state_selected="true" android:state_pressed="false">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <!-- Tab background color for the SELECTED tab state -->
+            <item>
+                <shape>
+                    <solid android:color="@color/translucent_tab_bar_bg"/>
+                </shape>
+            </item>
+            <!-- Bottom indicator color for the SELECTED tab state -->
+            <item android:top="-5dp" android:left="-5dp" android:right="-5dp">
+                <shape android:shape="rectangle">
+                    <stroke android:color="@color/tab_bar_bg" android:width="4dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
