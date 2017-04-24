@@ -1,11 +1,9 @@
-package com.comthingsdev.pandwarf.specAn.utils;
+package com.comthings.pandwarf.sample.SpectrumAnalyzer.utils;
 
 import android.app.Activity;
 
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
 import com.comthings.gollum.api.gollumandroidlib.ble.GollumBleManagerCallbacks;
-
-import java.util.Observable;
 
 /**
  * Created by Amine on 14/04/2017.

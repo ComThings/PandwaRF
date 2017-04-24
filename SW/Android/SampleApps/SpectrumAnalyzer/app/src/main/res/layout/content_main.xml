@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
 
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.comthingsdev.pandwarf.specAn.MainActivity"
+    tools:context="com.comthingsdev.pandwarf.specAn.com.comthingsdev.pandwarf.SpectrumAnalyzer.MainActivity"
     tools:showIn="@layout/app_bar_main">
 <FrameLayout
     android:id="@+id/fragment"

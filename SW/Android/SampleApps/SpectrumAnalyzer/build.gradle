@@ -16,12 +16,8 @@ allprojects {
     repositories {
         jcenter()
         maven {
-            url "https://mymavenrepo.com/repo/1C4zS3RyxJUw6Jciz0IM/"
-            credentials {
-                username = 'myMavenRepo'
-                password = 'mineleaders2003'
-
-            }
+            // Repo Read URL for PandwaRF Gollum Android Lib
+            url "https://mymavenrepo.com/repo/l8uzsKQuWwYGByPmlbZ4/"
         }
     }
 }

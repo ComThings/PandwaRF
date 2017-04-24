@@ -1,20 +1,19 @@
-package com.comthingsdev.pandwarf.specAn;
+package com.comthings.pandwarf.sample.SpectrumAnalyzer;
 
 import android.os.Bundle;
-
-import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
-import com.comthingsdev.pandwarf.specAn.fragment.ScanDevicesFragment;
-import com.comthingsdev.pandwarf.specAn.fragment.SpecAnalyserFragment;
+import com.comthings.pandwarf.sample.SpectrumAnalyzer.fragment.ScanDevicesFragment;
+import com.comthings.pandwarf.sample.SpectrumAnalyzer.fragment.SpecAnalyzerFragment;
+import com.comthings.pandwarf.specAn.R;
 import com.sdsmdg.tastytoast.TastyToast;
 
 
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new ScanDevicesFragment()).addToBackStack(null);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_specAn) {
-            fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new SpecAnalyserFragment()).addToBackStack(null);
+            fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new SpecAnalyzerFragment()).addToBackStack(null);
             fragmentTransaction.commit();
         } else if (id == R.id.disconnect) {
             GollumDongle.getInstance(this).closeDevice();

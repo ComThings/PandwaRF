@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpectrumAnalyzer.iml" filepath="$PROJECT_DIR$/SpectrumAnalyzer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/testspec.iml" filepath="$PROJECT_DIR$/testspec.iml" />
     </modules>
   </component>
 </project>

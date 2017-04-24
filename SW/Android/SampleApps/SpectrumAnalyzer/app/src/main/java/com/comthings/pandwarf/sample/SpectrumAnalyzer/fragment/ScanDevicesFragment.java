@@ -1,4 +1,4 @@
-package com.comthingsdev.pandwarf.specAn.fragment;
+package com.comthings.pandwarf.sample.SpectrumAnalyzer.fragment;
 
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -13,16 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SimpleAdapter;
 import android.widget.ToggleButton;
 
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
-import com.comthings.gollum.api.gollumandroidlib.utils.Utils;
-import com.comthingsdev.pandwarf.specAn.utils.ControllerBleDevice;
-import com.comthingsdev.pandwarf.specAn.R;
+import com.comthings.pandwarf.sample.SpectrumAnalyzer.utils.ControllerBleDevice;
+import com.comthings.pandwarf.specAn.R;
 import com.sdsmdg.tastytoast.TastyToast;
 
 import java.util.ArrayList;
@@ -106,7 +104,7 @@ public class ScanDevicesFragment extends Fragment {
                     GollumDongle.getInstance(getActivity()).stopSearchDevice();
 
                     GollumDongle.getInstance(getActivity()).openDevice(currentDevice, true, false, bleManagerCallbacks);
-                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new SpecAnalyserFragment()).addToBackStack(null);
+                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new SpecAnalyzerFragment()).addToBackStack(null);
                     fragmentTransaction.commit();
 
                 } catch (ClassCastException e) {

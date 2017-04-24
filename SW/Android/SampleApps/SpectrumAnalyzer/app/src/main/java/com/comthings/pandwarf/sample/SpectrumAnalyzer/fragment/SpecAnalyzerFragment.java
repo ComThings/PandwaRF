@@ -1,9 +1,8 @@
-package com.comthingsdev.pandwarf.specAn.fragment;
+package com.comthings.pandwarf.sample.SpectrumAnalyzer.fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +14,11 @@ import android.widget.ToggleButton;
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
 import com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger;
 import com.comthings.gollum.api.gollumandroidlib.utils.Utils;
-import com.comthingsdev.pandwarf.specAn.R;
+import com.comthings.pandwarf.specAn.R;
 import com.sdsmdg.tastytoast.TastyToast;
 
 
-public class SpecAnalyserFragment extends Fragment {
+public class SpecAnalyzerFragment extends Fragment {
     public static final int MHZ_TO_HZ = 1000000;
     public static final int DEFAULT_INC_KHZ = 25;
     public static final double DEFAULT_BASEFREQ_MHZ = 433;
@@ -40,7 +39,7 @@ public class SpecAnalyserFragment extends Fragment {
     int specchans = DEFAULT_SPECCHANS; // Nombres de channels
     int inckHz = DEFAULT_INC_KHZ; // Difference entre les channels (kHz)
 
-    public SpecAnalyserFragment() {
+    public SpecAnalyzerFragment() {
         // Required empty public constructor
     }
 
@@ -147,7 +146,7 @@ public class SpecAnalyserFragment extends Fragment {
                         }
                     }
                 };
-                // Initial Kick off of the SpecAnalyserFragment
+                // Initial Kick off of the SpecAnalyzerFragment
                 mHandler.postDelayed(mRefreshTimer, DEFAULT_SPECAN_REFRESH_RATE_MILLIS);
             }
         });
