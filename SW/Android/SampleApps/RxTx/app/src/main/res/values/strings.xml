@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">RxTx</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="stringRing">Ring</string>
+    <string name="stringExit">Exit</string>
+    <string name="stringLogOut">Log Out</string>
+
+    <string name="action_scan">Scan</string>
+    <string name="stringListen">Sniff</string>
+    <string name="stringListening">Sniffing...</string>
+    <string name="stringTransmit">Xmit</string>
+    <string name="stringTransmiting">Xmitting...</string>
+
+    <string name="msg_warning_already_connected_to_same_device_skipping">Already connected to this device, skipping</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

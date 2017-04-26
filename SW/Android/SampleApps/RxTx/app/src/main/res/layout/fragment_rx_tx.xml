@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/scroller_view"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="20dp"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbars="horizontal|vertical">
+
+    <LinearLayout
+        android:id="@+id/rxtx_parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rx/Tx radio data"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dummy2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <ToggleButton
+                android:id="@+id/listen_Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Listen"
+                android:textAllCaps="false"
+                android:textOff="@string/stringListen"
+                android:textOn="@string/stringListening"/>
+
+            <ToggleButton
+                android:id="@+id/xmit_Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Xmit"
+                android:textAllCaps="false"
+                android:textOff="@string/stringTransmit"
+                android:textOn="@string/stringTransmiting"/>
+
+            <Button
+                android:id="@+id/clear_data_Button"
+                style="@style/AppTheme.NoActionBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="Data"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/display_Result_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:maxLines="20"
+            android:scrollbars="vertical"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
