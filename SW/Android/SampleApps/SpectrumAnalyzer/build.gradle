@@ -17,7 +17,7 @@ allprojects {
         jcenter()
         maven {
             // Repo Read URL for PandwaRF Gollum Android Lib
-            url "https://mymavenrepo.com/repo/l8uzsKQuWwYGByPmlbZ4/"
+            url "http://mymavenrepo.com/repo/l8uzsKQuWwYGByPmlbZ4/"
         }
     }
 }
