@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/mainmenu"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load JavaScript"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/js_sdcard_scripts_parse_button"
+            style="@style/AppTheme.NoActionBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Load"/>
+
+        <ToggleButton
+            android:id="@+id/run_js_script_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Run"
+            android:textAllCaps="false"
+            android:textOff="Run"
+            android:textOn="Running..."/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroller_view"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_weight="0.37">
+
+        <com.pddstudio.highlightjs.HighlightJsView
+            android:id="@+id/textViewJsFileContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"/>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Output:"/>
+
+    <ScrollView
+        android:id="@+id/scrollView_JS_log"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_weight="0.57"
+        android:fillViewport="false">
+
+        <TextView
+            android:id="@+id/textView_js_gollum_print"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:gravity="bottom"
+            android:scrollbars="vertical"
+            android:textColor="@color/outputtextconsole"
+            android:textSize="10sp"/>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Colors for the app -->
+    <color name="primary_color">#356c52</color>
+    <color name="secondary_color">#356c52</color>
+
+    <!-- ComThings colors -->
+    <color name="ct_green">#356c52</color>
+    <color name="ct_green_bold">#1f4031</color>
+    <color name="ct_green_light">#63cf9c</color>
+
+    <!-- grayscale -->
+    <color name="white">#FFFFFF</color>
+    <color name="gray_light">@color/grey_400</color>
+    <color name="gray">@color/grey_500</color>
+    <color name="gray_dark">@color/grey_800</color>
+    <color name="black">#000000</color>
+
+    <!-- basic colors -->
+    <color name="green">#27D34D</color>
+    <color name="blue">#2A91BD</color>
+    <color name="orange">#FF9D2F</color>
+    <color name="red">#FF432F</color>
+
+
+    <!-- widget colors -->
+    <color name="spinner_primary">#999999</color>
+    <color name="spinner_start">#111111</color>
+    <color name="spinner_center">#444444</color>
+    <color name="spinner_end">#111111</color>
+
+    <color name="primarytext">@color/white</color>
+    <color name="primarytext_bg">@color/black</color>
+
+    <color name="secondarytext">@color/black</color>
+    <color name="secondarytext_bg">@color/gray_dark</color>
+
+    <color name="edittext">@color/black</color>
+    <color name="edittext_bg">@color/grey_400</color>
+
+    <color name="textview_light">@color/grey_600</color>
+
+    <color name="separator">#FFFFFF</color>
+
+    <color name="outputtextconsole">#30FF30</color>
+
+    <color name="popup_bg">@color/ct_green</color>
+
+    <color name="tabletleftdrawer_bg">#212121</color>
+
+    <color name="tab_bar_bg">#2ddf89</color>
+    <color name="translucent_tab_bar_bg">#752ddf89</color>
+
+    <color name="preference_bg">@color/background_material_dark</color>
+
+    <color name="app_toolbar_title_dongle_busy">@color/red</color>
+    <color name="app_toolbar_title_dongle_free">@color/white</color>
+
+</resources>

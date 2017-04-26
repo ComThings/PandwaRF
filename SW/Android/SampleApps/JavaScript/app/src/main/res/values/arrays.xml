@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="uuid">
+        <item>BUS LED</item>
+        <item>BUS Push Button</item>
+        <item>BUS Config</item>
+    </string-array>
+
+    <string-array name="config_commands">
+        <item>SET_LOOPBACK_MODE</item>
+        <item>RESET_CC1111</item>
+        <item>RUN_SELF_TEST</item>
+        <item>GET_LAST_SELF_TEST_RESULT</item>
+        <item>SET_USB_COMMUNICATION</item>
+    </string-array>
+
+    <string-array name="rx_data_colors_set_1">
+        <item>#ABABAB</item>
+        <item>#E6E6E6</item>
+    </string-array>
+
+    <string-array name="rx_data_colors_set_2">
+        <item>#ABABAB</item>
+        <item>#E6E6E6</item>
+    </string-array>
+
+    <string-array name="stringArrayIdkFer1000wSwitch_EF">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+
+    <string-array name="stringArrayIdkFer1000wPlugNum">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="stringArrayIdkFer1000wChannel">
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+        <item>IV</item>
+    </string-array>
+
+    <string-array name="rxtx_modulation_array">
+        <item>ASK/OOK</item>
+        <item>GFSK</item>
+        <item>2-FSK</item>
+        <item>4-FSK</item>
+        <item>MSK</item>
+    </string-array>
+
+    <string-array name="payload_size_array">
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+        <item>250</item>
+        <item>500</item>
+        <item>750</item>
+        <item>1000</item>
+    </string-array>
+
+    <string-array name="base_freq_range_array">
+        <item>1M</item>
+        <item>500K</item>
+        <item>200K</item>
+        <item>100K</item>
+    </string-array>
+</resources>
