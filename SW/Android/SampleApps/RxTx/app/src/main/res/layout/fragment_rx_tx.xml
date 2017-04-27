@@ -18,12 +18,30 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rx/Tx radio data"
                 android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <TextView
+                android:id="@+id/frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequency : "
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <TextView
+                android:id="@+id/modulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modulation : "
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <TextView
+                android:id="@+id/datarate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Rate : "
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
         </LinearLayout>
 
         <LinearLayout

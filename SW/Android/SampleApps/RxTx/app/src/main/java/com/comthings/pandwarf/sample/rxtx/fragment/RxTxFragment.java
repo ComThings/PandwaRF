@@ -1,10 +1,13 @@
 package com.comthings.pandwarf.sample.rxtx.fragment;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Spannable;
 import android.text.method.ScrollingMovementMethod;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -34,7 +37,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 	private static final int FRAME_LENGTH_DEFAULT_VALUE_BYTE = 52;  // 52 bytes
 	private ToggleButton button_Xmit, button_Listen;
 	private Button button_Clear_Data;
-	private static TextView dataDisplayResultTextView;
+	private static TextView dataDisplayResultTextView, frequencyTextView, modulationTextView, dataRateTextView;
 	public static RadioTask ongoingRadioTask;
 	private AsyncRadioRxTxTask mRxTxTask;
 
@@ -70,6 +73,15 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 		button_Clear_Data = (Button) contentView.findViewById(R.id.clear_data_Button);
 		button_Clear_Data.setOnClickListener(this);
 
+		frequencyTextView = (TextView)contentView.findViewById(R.id.frequency);
+		appendColoredText(frequencyTextView,freq+" Hz", Color.WHITE);
+
+		modulationTextView = (TextView)contentView.findViewById(R.id.modulation);
+		appendColoredText(modulationTextView,"ASK/OOK", Color.WHITE);
+
+		dataRateTextView = (TextView)contentView.findViewById(R.id.datarate);
+		appendColoredText(dataRateTextView,drate+" Bits/s", Color.WHITE);
+
 		dataDisplayResultTextView = (TextView) contentView.findViewById(R.id.display_Result_Text);
 		dataDisplayResultTextView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -84,6 +96,15 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 		});
 
 		return contentView;
+	}
+
+	public static void appendColoredText(TextView textView, String text, int color) {
+		int start = textView.getText().length();
+		textView.append(text);
+		int end = textView.getText().length();
+
+		Spannable spannableText = (Spannable) textView.getText();
+		spannableText.setSpan(new ForegroundColorSpan(color), start, end, 0);
 	}
 
 	/* (non-Javadoc)
