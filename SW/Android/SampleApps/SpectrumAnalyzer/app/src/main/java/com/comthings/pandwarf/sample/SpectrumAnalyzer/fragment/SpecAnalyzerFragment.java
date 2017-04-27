@@ -86,10 +86,6 @@ public class SpecAnalyzerFragment extends Fragment {
 					GollumDongle.getInstance(getActivity()).rfSpecanStop(0, new GollumCallbackGetInteger() {
 						@Override
 						public void done(int integer) {
-							//reset CC1111 to reset RF params because Specan modified them
-							GollumDongle.getInstance(getActivity()).hardResetChip(0, null);
-							// Re-enter normal TX mode, (acknowledged mode) to enable retransmission of lost packets
-							GollumDongle.getInstance(getActivity()).writeTxRetryMode(true);
 						}
 					});
 				}
@@ -118,9 +114,6 @@ public class SpecAnalyzerFragment extends Fragment {
 		GollumDongle.getInstance(getActivity()).rfSpecanStart(0, basefreqHz, channelIncrementHz, numChannels, DEFAULT_SPECAN_REFRESH_RATE_MILLIS, new GollumCallbackGetInteger() {
 			@Override
 			public void done(int integer) {
-				// Enter in "UDP" like mode, as there is no interest in retransmiting old packets
-				GollumDongle.getInstance(getActivity()).writeTxRetryMode(false);
-
 				// Warning: you are responsible for calling rfSpecanGetRssi() in background thread and update the results in UI thread.
 				// Below code is only for demo
 				mRefreshTimer = new Runnable() {
