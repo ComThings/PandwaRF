@@ -5,10 +5,13 @@ import android.app.Activity;
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
 import com.comthings.gollum.api.gollumandroidlib.ble.GollumBleManagerCallbacks;
 
+import java.util.HashMap;
+import java.util.Observable;
+
 /**
  * Created by Amine on 14/04/2017.
  */
-public class ControllerBleDevice implements GollumBleManagerCallbacks {
+public class ControllerBleDevice extends Observable implements GollumBleManagerCallbacks {
 
 	private Activity parentActivity;
 
@@ -108,6 +111,12 @@ public class ControllerBleDevice implements GollumBleManagerCallbacks {
 
 	@Override
 	public void onDeviceConnected() {
+
+		HashMap<String, Object> data = new HashMap<String, Object>();
+		data.put("action", "onDeviceConnected");
+
+		setChanged();
+		notifyObservers(data);
 	}
 
 	@Override
@@ -116,6 +125,12 @@ public class ControllerBleDevice implements GollumBleManagerCallbacks {
 
 	@Override
 	public void onDeviceDisconnected() {
+
+		HashMap<String, Object> data = new HashMap<String, Object>();
+		data.put("action", "onDeviceDisconnected");
+
+		setChanged();
+		notifyObservers(data);
 	}
 
 	@Override
@@ -128,6 +143,12 @@ public class ControllerBleDevice implements GollumBleManagerCallbacks {
 
 	@Override
 	public void onDeviceReady() {
+
+		HashMap<String, Object> data = new HashMap<String, Object>();
+		data.put("action", "onDeviceReady");
+
+		setChanged();
+		notifyObservers(data);
 
 		//Notification for RX
 		GollumDongle.getInstance(parentActivity).writeNotifRXCharacteristic(true);

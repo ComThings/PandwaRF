@@ -13,12 +13,14 @@ import android.view.MenuItem;
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
 import com.comthings.pandwarf.sample.SpectrumAnalyzer.fragment.ScanDevicesFragment;
 import com.comthings.pandwarf.sample.SpectrumAnalyzer.fragment.SpecAnalyzerFragment;
+import com.comthings.pandwarf.sample.SpectrumAnalyzer.utils.ControllerBleDevice;
 import com.comthings.pandwarf.specAn.R;
-import com.sdsmdg.tastytoast.TastyToast;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 	FragmentTransaction fragmentTransaction;
+	ControllerBleDevice controllerBleDevice;
+	ScanDevicesFragment scanDevicesFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		toggle.syncState();
 		NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 		navigationView.setNavigationItemSelectedListener(this);
-		fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new ScanDevicesFragment()).addToBackStack(null);
+		controllerBleDevice = new ControllerBleDevice(this);
+		scanDevicesFragment = new ScanDevicesFragment();
+		scanDevicesFragment.setControllerBleDevice(controllerBleDevice);
+		controllerBleDevice.addObserver(scanDevicesFragment);
+
+		fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment, scanDevicesFragment).addToBackStack(null);
 		fragmentTransaction.commit();
 	}
 
@@ -55,14 +62,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 		if (id == R.id.nav_scan) {
 			// Handle the camera action
-			fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new ScanDevicesFragment()).addToBackStack(null);
+			fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment, scanDevicesFragment).addToBackStack(null);
 			fragmentTransaction.commit();
 		} else if (id == R.id.nav_specAn) {
 			fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new SpecAnalyzerFragment()).addToBackStack(null);
 			fragmentTransaction.commit();
 		} else if (id == R.id.disconnect) {
 			GollumDongle.getInstance(this).closeDevice();
-			TastyToast.makeText(this, "Disconnected", TastyToast.LENGTH_SHORT, TastyToast.INFO);
 		}
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

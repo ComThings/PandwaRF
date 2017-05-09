@@ -26,6 +26,8 @@ import com.sdsmdg.tastytoast.TastyToast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
 import no.nordicsemi.android.nrftoolbox.scanner.ExtendedBluetoothDevice;
 import no.nordicsemi.android.nrftoolbox.scanner.ScannerListener;
@@ -36,7 +38,7 @@ import no.nordicsemi.android.nrftoolbox.scanner.ScannerListener;
  * to handle interaction events.
  * create an instance of this com.comthingsdev.pandwarf.specAn.fragment.
  */
-public class ScanDevicesFragment extends Fragment {
+public class ScanDevicesFragment extends Fragment implements Observer {
 	private static final String TAG = "ScanFragment";
 	private static final int INVALID_DEVICE_POSITION = -1;
 
@@ -66,6 +68,10 @@ public class ScanDevicesFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 	}
 
+	public void setControllerBleDevice(ControllerBleDevice controller) {
+		bleManagerCallbacks = controller;
+	}
+
 	@Override
 	public void onPause() {
 		Log.d(TAG, "onPause()");
@@ -82,7 +88,6 @@ public class ScanDevicesFragment extends Fragment {
 					previousDevicePosition = currentDevicePosition;
 					currentDevice = findBluetoothDeviceByAddress((HashMap<String, String>) deviceListView.getAdapter().getItem(position));
 					currentDevicePosition = position;
-
 					// Avoid closing and re-opening same device if we are already connected to it
 					if ((currentDevicePosition == previousDevicePosition) && bleDeviceConnected) {
 
@@ -104,8 +109,6 @@ public class ScanDevicesFragment extends Fragment {
 					GollumDongle.getInstance(getActivity()).stopSearchDevice();
 
 					GollumDongle.getInstance(getActivity()).openDevice(currentDevice, true, false, bleManagerCallbacks);
-					FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new SpecAnalyzerFragment()).addToBackStack(null);
-					fragmentTransaction.commit();
 
 				} catch (ClassCastException e) {
 					e.printStackTrace();
@@ -288,4 +291,36 @@ public class ScanDevicesFragment extends Fragment {
 	}
 
 
+	@Override
+	public void update(Observable o, Object arg) {
+		// If fragment's layout has not been created (onCreateView() not called) skip notification
+		if (getView() == null) {
+			return;
+		}
+
+		HashMap<String, Object> data = (HashMap<String, Object>) arg;
+		String action = (String) data.get("action");
+
+		if (action.equals("onDeviceConnected")) {
+			onDeviceConnected();
+		} else if (action.equals("onDeviceReady")) {
+			onDeviceReady();
+		} else if (action.equals("onDeviceDisconnected")) {
+			onDeviceDisconnected();
+		}
+	}
+
+	private void onDeviceConnected() {
+		TastyToast.makeText(getActivity().getApplicationContext(), "Connected", TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
+	}
+
+	private void onDeviceReady() {
+		FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new SpecAnalyzerFragment()).addToBackStack(null);
+		fragmentTransaction.commit();
+		TastyToast.makeText(getActivity().getApplicationContext(), "Ready", TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
+	}
+
+	private void onDeviceDisconnected() {
+		TastyToast.makeText(getActivity().getApplicationContext(), "Disconnected", TastyToast.LENGTH_SHORT, TastyToast.INFO);
+	}
 }
