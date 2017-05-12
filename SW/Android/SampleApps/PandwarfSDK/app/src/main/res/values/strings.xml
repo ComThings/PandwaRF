@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PandwaRF SDK</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="msg_warning_already_connected_to_same_device_skipping">Already Connected</string>
+    <string name="stringListen">Sniff</string>
+	<string name="stringListening">Sniffing...</string>
+    <string name="stringTransmit">Xmit</string>
+    <string name="stringTransmiting">Xmitting...</string>
+	<string name="msg_error_incorrect_file_picker">Incorrect Activity resultCode, try another file picker</string>
+
+</resources>
