@@ -1,0 +1,23 @@
+Unmatched Fonts
+---------------
+
+Report File:        I:\Djamil\Google Drives\ComThings\Gollum Project\R&D\Prototype\GollumRF Big\Rev. D\Rev.D 1.60 06_10_2016\GollumV3_Rev1.6 Native Files\GollumV3 (PCB - Unmatched Fonts).txt
+Report Written:     Tuesday, May 30, 2017
+Design Path:        I:\Djamil\Google Drives\ComThings\Gollum Project\R&D\Prototype\GollumRF Big\Rev. D\Rev.D 1.60 06_10_2016\GollumV3_Rev1.6 Native Files\GollumV3.pcb
+Design Title:       
+Created:            30/06/2014 17:36:24
+Last Saved:         06/10/2016 08:48:58
+Editing Time:       18495 min
+Units:              mm (precision 3)
+
+
+The design has unmatched fonts on this system for the following:
+================================================================
+
+
+Unmatched fonts on local styles:
+================================
+
+    Font 'Arial Bold' used by Text on layer 'Top Silk' at (11.500, 16.750)
+
+End Of Report.

@@ -1,0 +1,40 @@
+Measure Report
+--------------
+
+Report File:        I:\Djamil\Google Drives\ComThings\Gollum Project\R&D\Prototype\GollumRF Big\Rev. D\Rev.D 1.60 06_10_2016\GollumV3_Rev1.6 Native Files\GollumV3 (PCB - Measure Report).txt
+Report Written:     Monday, December 12, 2016
+Project Path:       I:\Djamil\Google Drives\ComThings\Gollum Project\R&D\Prototype\GollumRF Big\Rev. D\Rev.D 1.60 06_10_2016\GollumV3_Rev1.6 Native Files\Gollum_V3.prj
+Design Path:        I:\Djamil\Google Drives\ComThings\Gollum Project\R&D\Prototype\GollumRF Big\Rev. D\Rev.D 1.60 06_10_2016\GollumV3_Rev1.6 Native Files\GollumV3.pcb
+Design Title:       
+Created:            30/06/2014 16:36:24
+Last Saved:         06/10/2016 07:48:58
+Editing Time:       18500 min
+Units:              mm (precision 3)
+
+    Units: mm
+    
+
+From:  Point
+============
+
+X: 5.375
+Y: 36.750X: 5.375
+Y: 36.750
+
+To:  Point
+==========
+
+X: -31.125
+Y: 36.375X: -31.125
+Y: 36.375
+
+Distance
+========
+
+  Distance: 36.502
+         X: -36.500
+         Y: -0.375
+     Angle:  180.6
+
+
+End Of Report.
