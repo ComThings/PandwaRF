@@ -9,7 +9,7 @@ from rflib import *
 
 
 
-intro = """'RfCat, the greatest thing since Frequency Hopping!'
+intro = """'RfCat, the greatest thing since Frequency Hopping! Modified version to run with PandwaRF'
 
 Research Mode: enjoy the raw power of rflib
 
