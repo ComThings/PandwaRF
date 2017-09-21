@@ -61,6 +61,7 @@ USB_SYNCH_FRAME                 =0x12
 APP_GENERIC                     = 0x01
 APP_DEBUG                       = 0xfe
 APP_SYSTEM                      = 0xff
+APP_SYSTEM_GOLLUM               = 0xf1
 
 
 SYS_CMD_PEEK                    = 0x80
@@ -75,6 +76,7 @@ SYS_CMD_RFMODE                  = 0x88
 SYS_CMD_LED                     = 0x89
 SYS_CMD_PM3                     = 0x8A
 SYS_CMD_RESET                   = 0x8f
+SYS_CMD_GET_FW_VERSION          = 0x90
 
 EP0_CMD_GET_DEBUG_CODES         = 0x00
 EP0_CMD_GET_ADDRESS             = 0x01
@@ -975,6 +977,10 @@ class USBDongle:
         r, t = self.send(APP_SYSTEM, SYS_CMD_BUILDTYPE, '')
         return r
 
+    def getFwVersion(self):
+        r, t = self.send(APP_SYSTEM_GOLLUM, SYS_CMD_GET_FW_VERSION, '')
+        return r
+
     def getInterruptRegisters(self):
         regs = {}
         # IEN0,1,2
@@ -1298,14 +1304,26 @@ class USBDongle:
 
         hardware= self.getBuildInfo()
         output.append("Dongle:              %s" % hardware.split(' ')[0])
-        try:
-            output.append("Firmware rev:        %s" % hardware.split('r')[1])
-        except:
-            output.append("Firmware rev:        Not found! Update needed!")
+
+        if("Gollum" not in hardware):
+            try:
+                output.append("Firmware rev:        %s" % hardware.split('r')[1])
+            except:
+                output.append("Firmware rev:        Not found! Update needed!")
+        else:
+            fwVersion = self.getFwVersion()
+            output.append("Firmware rev:        %s" % fwVersion)
+
         # see if we have a bootloader by loooking for it's recognition semaphores
         # in SFR I2SCLKF0 & I2SCLKF1
         if(self.peek(0xDF46,1) == '\xF0' and self.peek(0xDF47,1) == '\x0D'):
             output.append("Bootloader:          CC-Bootloader")
+        elif(self.peek(0xDF46,1) == '\xCC' and self.peek(0xDF47,1) == '\x01'):
+            output.append("Bootloader:          Gollum CCTL v1")
+        elif(self.peek(0xDF46,1) == '\xCC' and self.peek(0xDF47,1) == '\x02'):
+            output.append("Bootloader:          GollumCCTL v2")
+        elif("CCtl" in hardware):
+            output.append("Bootloader:          Gollum CCTL")
         else:
             output.append("Bootloader:          Not installed")
         return "\n".join(output)
