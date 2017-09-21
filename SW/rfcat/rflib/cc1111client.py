@@ -279,7 +279,7 @@ direct=False
 
 class USBDongle:
     ######## INITIALIZATION ########
-    def __init__(self, idx=0, debug=False, copyDongle=None, RfMode=RFST_SRX):
+    def __init__(self, idx=0, debug=False, copyDongle=None, RfMode=RFST_SIDLE):
         self.rsema = None
         self.xsema = None
         self._bootloader = False

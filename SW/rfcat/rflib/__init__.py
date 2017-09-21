@@ -187,7 +187,7 @@ def interactive(idx=0, DongleClass=RfCat, intro=''):
     import atexit
 
     d = DongleClass(idx=idx)
-    d.setModeRX()       # this puts the dongle into receive mode
+    d.setModeIDLE()       # this puts the dongle into Idle mode
     atexit.register(cleanupInteractiveAtExit)
 
     gbls = globals()
