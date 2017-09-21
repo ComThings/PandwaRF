@@ -201,7 +201,7 @@ def interactive(idx=0, DongleClass=RfCat, intro=''):
 
     except ImportError, e:
         try:
-            from IPython.frontend.terminal.interactiveshell import TerminalInteractiveShell
+            from IPython.terminal.interactiveshell import TerminalInteractiveShell
             ipsh = TerminalInteractiveShell()
             ipsh.user_global_ns.update(gbls)
             ipsh.user_global_ns.update(lcls)
