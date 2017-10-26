@@ -9,6 +9,7 @@ import pickle
 import threading
 #from chipcondefs import *
 from cc1111client import *
+from cc1111gollum import *
 
 APP_NIC =                       0x42
 APP_SPECAN =                    0x43
@@ -143,9 +144,9 @@ def printSyncWords(syncworddict):
         print("0x%.4x: %d" % (x,y))
 
 
-class FHSSNIC(USBDongle):
+class FHSSNIC(GollumDongle):
     def __init__(self, idx=0, debug=False, copyDongle=None, RfMode=RFST_SRX):
-        USBDongle.__init__(self, idx, debug, copyDongle, RfMode)
+        GollumDongle.__init__(self, idx, debug, copyDongle, RfMode)
         self.endec = None
 
     def setAESmode(self, aesmode=AES_CRYPTO_DEFAULT):

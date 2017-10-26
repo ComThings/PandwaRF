@@ -61,7 +61,6 @@ USB_SYNCH_FRAME                 =0x12
 APP_GENERIC                     = 0x01
 APP_DEBUG                       = 0xfe
 APP_SYSTEM                      = 0xff
-APP_SYSTEM_GOLLUM               = 0xf1
 
 
 SYS_CMD_PEEK                    = 0x80
@@ -98,7 +97,14 @@ EP5IN_MAX_PACKET_SIZE           = 64
 # EP5OUT_BUFFER_SIZE must match firmware/include/chipcon_usb.h definition
 EP5OUT_BUFFER_SIZE              = 516
 
+# Modulation
+MODULATION_ASK_OOK              = 0x30
+MODULATION_2FSK                 = 0x00
+MODULATION_4FSK                 = 0x40
+MODULATION_GFSK                 = 0x10
+MODULATION_MSK                  = 0x70
 
+# Sync-word qualifier mode
 SYNCM_NONE                      = 0
 SYNCM_15_of_16                  = 1
 SYNCM_16_of_16                  = 2
@@ -953,13 +959,13 @@ class USBDongle:
         except ChipconUsbTimeoutException:
             pass
 
-    def set_power_mode_3(self):
-        r, t = self.send(APP_SYSTEM, SYS_CMD_PM3, '')
-        return r
+    # def set_power_mode_3(self):
+    #     r, t = self.send(APP_SYSTEM, SYS_CMD_PM3, '')
+    #     return r
 
-    def led(self, data):
-        r, t = self.send(APP_SYSTEM, SYS_CMD_LED, struct.pack("B", data))
-        return r
+    # def led(self, data):
+    #     r, t = self.send(APP_SYSTEM, SYS_CMD_LED, struct.pack("B", data))
+    #     return r
 
     def peek(self, addr, bytecount=1):
         r, t = self.send(APP_SYSTEM, SYS_CMD_PEEK, struct.pack("<HH", bytecount, addr))
@@ -975,10 +981,6 @@ class USBDongle:
 
     def getBuildInfo(self):
         r, t = self.send(APP_SYSTEM, SYS_CMD_BUILDTYPE, '')
-        return r
-
-    def getFwVersion(self):
-        r, t = self.send(APP_SYSTEM_GOLLUM, SYS_CMD_GET_FW_VERSION, '')
         return r
 
     def getInterruptRegisters(self):
@@ -1954,7 +1956,6 @@ class USBDongle:
     def getLQI(self):
         lqi = self.peek(LQI)
         return lqi
-
 
     def reprRadioTestSignalConfig(self, radiocfg=None):
         if radiocfg==None:
