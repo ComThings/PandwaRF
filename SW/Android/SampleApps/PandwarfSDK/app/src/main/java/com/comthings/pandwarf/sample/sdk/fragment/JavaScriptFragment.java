@@ -233,7 +233,7 @@ public class JavaScriptFragment extends Fragment implements View.OnClickListener
 	// EventBus
 	// This method will be called when a JavaScriptConsoleLogEvent is posted
 	public void onEventMainThread(JavaScriptConsoleLogEvent event) {
-		log(event.stringToPrint);
+		log(event.getStringToPrint());
 	}
 
 	public void log(final String text) {

@@ -32,6 +32,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 	private static final String TAG = "RxTxFrag";
 	private static final int RX_PACKET_SIZE = 250;
 	private static final int FRAME_LENGTH_DEFAULT_VALUE_BYTE = 52;  // 52 bytes
+	private static int CHANNEL_FILTER_BANDWIDTH_HZ = 75000;		// Receiver Channel Filter Bandwidth to use (75 KHz)
 	private ToggleButton button_Xmit, button_Listen;
 	private Button button_Clear_Data;
 	private static TextView dataDisplayResultTextView, frequencyTextView, modulationTextView, dataRateTextView;
@@ -42,6 +43,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 	static int drate = 3200;    // Data rate to use
 	static int mod = 0x30;        // Modulation  to use
 	static int frameLength = FRAME_LENGTH_DEFAULT_VALUE_BYTE; // Size of the CC1111 RX data frame (payload only)
+
 	static byte[] bufferHex = new byte[RX_PACKET_SIZE];    // Hex buffer : range [0x00 to 0xFF]
 	static int rx_size = 0; //Size of the bufferHex[] array
 	static int rx_bytes_read = 0;    // Total RX bytes read
@@ -190,7 +192,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 				ongoingRadioTask = RadioTask.RADIO_RX;
 
 				// Use rxSetup() version which is executed in the same context, not background task
-				GollumDongle.getInstance(getActivity()).rxSetup(freq, mod, drate, frameLength);
+				GollumDongle.getInstance(getActivity()).rxSetup(freq, mod, drate, frameLength, CHANNEL_FILTER_BANDWIDTH_HZ);
 
 				publishProgress();
 

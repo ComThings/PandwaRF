@@ -109,7 +109,7 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 					// Stop BLE scanForDevices
 					GollumDongle.getInstance(getActivity()).stopSearchDevice();
 
-					GollumDongle.getInstance(getActivity()).openDevice(currentDevice, true, false, bleManagerCallbacks);
+					GollumDongle.getInstance(getActivity()).openGollumBleDevice(currentDevice, true, false, true, bleManagerCallbacks);
 
 				} catch (ClassCastException e) {
 					e.printStackTrace();
@@ -278,6 +278,11 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 
 			@Override
 			public void onSignalEndScan(Exception e) {
+
+			}
+
+			@Override
+			public void onSignalConnectedDevice(ExtendedBluetoothDevice extendedBluetoothDevice) {
 
 			}
 		});

@@ -32,7 +32,6 @@ public class ControllerBleDevice extends Observable implements GollumBleManagerC
 	@Override
 	public void onConnectionParamsValueReceived(int min, int max, int s, int sp) {
 
-
 	}
 
 	@Override
@@ -110,8 +109,7 @@ public class ControllerBleDevice extends Observable implements GollumBleManagerC
 	}
 
 	@Override
-	public void onDeviceConnected() {
-
+	public void onDeviceConnected(String s) {
 		HashMap<String, Object> data = new HashMap<String, Object>();
 		data.put("action", "onDeviceConnected");
 
