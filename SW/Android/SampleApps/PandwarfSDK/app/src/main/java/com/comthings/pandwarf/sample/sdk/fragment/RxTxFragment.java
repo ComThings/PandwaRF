@@ -19,6 +19,7 @@ import android.widget.ToggleButton;
 
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
 import com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger;
+import com.comthings.gollum.api.gollumandroidlib.common.Common;
 import com.comthings.gollum.api.gollumandroidlib.utils.Utils;
 import com.comthings.pandwarf.sample.sdk.R;
 import com.sdsmdg.tastytoast.TastyToast;
@@ -32,22 +33,23 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 	private static final String TAG = "RxTxFrag";
 	private static final int RX_PACKET_SIZE = 250;
 	private static final int FRAME_LENGTH_DEFAULT_VALUE_BYTE = 52;  // 52 bytes
-	private static int CHANNEL_FILTER_BANDWIDTH_HZ = 75000;		// Receiver Channel Filter Bandwidth to use (75 KHz)
+	private static int CHANNEL_FILTER_BANDWIDTH_HZ = 75000;        // Receiver Channel Filter Bandwidth to use (75 KHz)
 	private ToggleButton button_Xmit, button_Listen;
 	private Button button_Clear_Data;
-	private static TextView dataDisplayResultTextView, frequencyTextView, modulationTextView, dataRateTextView;
-	public static RadioTask ongoingRadioTask;
+	private TextView dataDisplayResultTextView, frequencyTextView, modulationTextView, dataRateTextView;
+	public RadioTask ongoingRadioTask;
 	private AsyncRadioRxTxTask mRxTxTask;
 
-	static int freq = 433913879;    // Frequency to use
-	static int drate = 3200;    // Data rate to use
-	static int mod = 0x30;        // Modulation  to use
-	static int frameLength = FRAME_LENGTH_DEFAULT_VALUE_BYTE; // Size of the CC1111 RX data frame (payload only)
+	int freq = 433913879;    // Frequency to use
+	int drate = 3200;    // Data rate to use
+	int mod = Common.getModulationValue("ASK/OOK");        // Modulation  to use
+	int frameLength = FRAME_LENGTH_DEFAULT_VALUE_BYTE; // Size of the CC1111 RX data frame (payload only)
 
-	static byte[] bufferHex = new byte[RX_PACKET_SIZE];    // Hex buffer : range [0x00 to 0xFF]
-	static int rx_size = 0; //Size of the bufferHex[] array
-	static int rx_bytes_read = 0;    // Total RX bytes read
-	static int requested_rx_bytes = 50;
+	String dataBuffer;
+	byte[] bufferHex = new byte[RX_PACKET_SIZE];    // Hex buffer : range [0x00 to 0xFF]
+	int rx_size = 0; //Size of the bufferHex[] array
+	int rx_bytes_read = 0;    // Total RX bytes read
+	int requested_rx_bytes = 50;
 	boolean rxDone = false;
 
 	private View contentView;
@@ -58,8 +60,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 	}
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-							 Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		Log.d(TAG, "onCreateView()");
 		// Inflate the layout for this fragment
 		contentView = inflater.inflate(R.layout.fragment_rx_tx, container, false);
@@ -72,14 +73,14 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 		button_Clear_Data = (Button) contentView.findViewById(R.id.clear_data_Button);
 		button_Clear_Data.setOnClickListener(this);
 
-		frequencyTextView = (TextView)contentView.findViewById(R.id.frequency);
-		appendColoredText(frequencyTextView,freq+" Hz", Color.WHITE);
+		frequencyTextView = (TextView) contentView.findViewById(R.id.frequency);
+		appendColoredText(frequencyTextView, freq + " Hz", Color.WHITE);
 
-		modulationTextView = (TextView)contentView.findViewById(R.id.modulation);
-		appendColoredText(modulationTextView,"ASK/OOK", Color.WHITE);
+		modulationTextView = (TextView) contentView.findViewById(R.id.modulation);
+		appendColoredText(modulationTextView, "ASK/OOK", Color.WHITE);
 
-		dataRateTextView = (TextView)contentView.findViewById(R.id.datarate);
-		appendColoredText(dataRateTextView,drate+" Bits/s", Color.WHITE);
+		dataRateTextView = (TextView) contentView.findViewById(R.id.datarate);
+		appendColoredText(dataRateTextView, drate + " Bits/s", Color.WHITE);
 
 		dataDisplayResultTextView = (TextView) contentView.findViewById(R.id.display_Result_Text);
 		dataDisplayResultTextView.setMovementMethod(new ScrollingMovementMethod());
@@ -136,7 +137,9 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 
 		if (v == button_Xmit) {
 			if (button_Xmit.isChecked()) {
-				if (dataDisplayResultTextView.getText().toString().length() == 0) {
+				dataBuffer = dataDisplayResultTextView.getText().toString();
+
+				if (dataBuffer.length() == 0) {
 					button_Xmit.setChecked(false);
 
 					TastyToast.makeText(getContext(), "TX buffer empty", TastyToast.LENGTH_SHORT, TastyToast.ERROR);
@@ -224,8 +227,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 				GollumDongle.getInstance(getActivity()).txSetup(freq, mod, drate);
 
 				// TX phase - once
-				String data = dataDisplayResultTextView.getText().toString();
-				GollumDongle.getInstance(getActivity()).txSend(data.getBytes(), data.getBytes().length / 2, true);
+				GollumDongle.getInstance(getActivity()).txSend(dataBuffer.getBytes(), dataBuffer.getBytes().length / 2, true);
 			}
 
 			return null;
