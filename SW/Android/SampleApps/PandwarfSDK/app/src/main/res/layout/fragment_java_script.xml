@@ -16,8 +16,8 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Load JavaScript"
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
+        android:text="JavaScript"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
     <LinearLayout
         android:layout_width="match_parent"

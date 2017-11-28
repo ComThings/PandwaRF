@@ -9,12 +9,18 @@
     >
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
         android:orientation="vertical"
         android:weightSum="1"
         tools:context="com.comthingsdev.pandwarf.specAn.SpecAn">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spectrum Analyzer"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,9 +31,9 @@
             <ToggleButton
                 android:id="@+id/toggleButtonSpectrum"
                 style="@style/AppTheme.NoActionBar"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.22"
+                android:layout_weight="1"
                 android:text="New ToggleButton"
                 android:textOff="Start"
                 android:textOn="Stop"/>
@@ -35,9 +41,10 @@
             <Button
                 android:id="@+id/buttonReset"
                 style="@style/AppTheme.NoActionBar"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Reset"/>
+                android:text="Reset"
+                android:layout_weight="1"/>
 
         </LinearLayout>
 
