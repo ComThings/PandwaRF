@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
@@ -19,6 +20,9 @@ import com.comthings.pandwarf.sample.sdk.utils.ControllerBleDevice;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+	private static final String TAG = "MainActivity";
+	private static final boolean KEEP_CONNECTION_IN_BACKGROUND = true;
+
 	FragmentTransaction fragmentTransaction;
 	ControllerBleDevice controllerBleDevice;
 	ScanDevicesFragment scanDevicesFragment;
@@ -81,5 +85,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 		drawer.closeDrawer(GravityCompat.START);
 		return true;
+	}
+
+	@Override
+	protected void onDestroy() {
+		GollumDongle.getInstance(this).destroy();
+		super.onDestroy();
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+
+		if (!KEEP_CONNECTION_IN_BACKGROUND) {
+			Log.d(TAG, "BLE connection pause, going to background");
+			GollumDongle.getInstance(this).pause();
+		}
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+
+		if (!KEEP_CONNECTION_IN_BACKGROUND) {
+			Log.d(TAG, "Auto reconnect - onResume() - to last BLE mac address");
+			GollumDongle.getInstance(this).reconnect("");
+		}
 	}
 }

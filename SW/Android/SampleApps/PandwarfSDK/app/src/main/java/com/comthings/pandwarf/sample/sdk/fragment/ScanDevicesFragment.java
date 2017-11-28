@@ -91,7 +91,6 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 					currentDevicePosition = position;
 					// Avoid closing and re-opening same device if we are already connected to it
 					if ((currentDevicePosition == previousDevicePosition) && bleDeviceConnected) {
-
 						if (getActivity() != null) {
 							TastyToast.makeText(getActivity().getApplicationContext(), getString(R.string.msg_warning_already_connected_to_same_device_skipping), TastyToast.LENGTH_SHORT, TastyToast.WARNING);
 						}
@@ -99,7 +98,6 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 					}
 
 					if (currentDevice == null) {
-
 						if (getActivity() != null) {
 							TastyToast.makeText(getActivity().getApplicationContext(), "error", TastyToast.LENGTH_LONG, TastyToast.ERROR);
 						}
@@ -107,7 +105,7 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 					}
 
 					// Stop BLE scanForDevices
-					GollumDongle.getInstance(getActivity()).stopSearchDevice();
+					stopScanForDevices();
 
 					GollumDongle.getInstance(getActivity()).openGollumBleDevice(currentDevice, true, false, true, bleManagerCallbacks);
 
@@ -123,7 +121,6 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 	private void initModel() {
 		deviceListItem = new ArrayList<HashMap<String, String>>();
 		deviceListAdapter = new SimpleAdapter(getActivity(), deviceListItem, R.layout.device_item, new String[]{"name", "address"}, new int[]{R.id.name, R.id.address});
-
 	}
 
 	public static void checkBluetoothStatus(Context anActivity) {
@@ -226,7 +223,6 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 			map.put("address", device.getAddress());
 
 			deviceListItem.add(map);
-
 		}
 		deviceListAdapter.notifyDataSetChanged();
 
@@ -269,7 +265,6 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 						addDevice(device);
 					}
 				});
-
 			}
 
 			@Override
@@ -289,8 +284,7 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 	}
 
 	private void stopScanForDevices() {
-
-		progressBarScanDevices.setVisibility(View.VISIBLE);
+		progressBarScanDevices.setVisibility(View.INVISIBLE);
 		buttonScanDevices.setChecked(false);
 
 		GollumDongle.getInstance(getActivity()).stopSearchDevice();
