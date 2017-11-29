@@ -44,6 +44,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 	int drate = 3200;    // Data rate to use
 	int mod = Common.getModulationValue("ASK/OOK");        // Modulation  to use
 	int frameLength = FRAME_LENGTH_DEFAULT_VALUE_BYTE; // Size of the CC1111 RX data frame (payload only)
+	int deviation = 20508;	// Frequency deviation in Hz (used for non some OOK modulation)
 
 	String dataBuffer;
 	byte[] bufferHex = new byte[RX_PACKET_SIZE];    // Hex buffer : range [0x00 to 0xFF]
@@ -195,7 +196,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 				ongoingRadioTask = RadioTask.RADIO_RX;
 
 				// Use rxSetup() version which is executed in the same context, not background task
-				GollumDongle.getInstance(getActivity()).rxSetup(freq, mod, drate, frameLength, CHANNEL_FILTER_BANDWIDTH_HZ);
+				GollumDongle.getInstance(getActivity()).rxSetup(freq, mod, drate, frameLength, CHANNEL_FILTER_BANDWIDTH_HZ, deviation);
 
 				publishProgress();
 
@@ -224,7 +225,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 				// TX Setup phase - once
 				ongoingRadioTask = RadioTask.RADIO_TX;
 
-				GollumDongle.getInstance(getActivity()).txSetup(freq, mod, drate);
+				GollumDongle.getInstance(getActivity()).txSetup(freq, mod, drate, deviation);
 
 				// TX phase - once
 				GollumDongle.getInstance(getActivity()).txSend(dataBuffer.getBytes(), dataBuffer.getBytes().length / 2, true);
