@@ -34,6 +34,17 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 	private static final int RX_PACKET_SIZE = 250;
 	private static final int FRAME_LENGTH_DEFAULT_VALUE_BYTE = 52;  // 52 bytes
 	private static int CHANNEL_FILTER_BANDWIDTH_HZ = 75000;        // Receiver Channel Filter Bandwidth to use (75 KHz)
+
+	private static final int RF_POWER_AMPLIFIERS_ACTION_ALL_OFF = 0x00;        	// action turn off amplifiers
+	private static final int RF_TX_POWER_AMPLIFIER_ACTION_ON = 0x01;        	// action turn on TX amplifier
+	private static final int RF_RX_POWER_AMPLIFIER_ACTION_ON = 0x02;        	// action turn on RX amplifier
+	private static final int RF_TX_RX_POWER_AMPLIFIER_ACTION_ON = 0x05;    		// action turn on TX & RX amplifiers (not supported by rev. E)
+	private static final int RF_TX_POWER_AMPLIFIER_ACTION_ON_TX = 0x06;    		// action turn on TX amplifier only when transmitting
+	private static final int RF_RX_POWER_AMPLIFIER_ACTION_ON_RX = 0x07;    		// action turn on RX amplifier only when receiving
+	private static final int RF_TX_RX_POWER_AMPLIFIER_ACTION_ON_TX_RX = 0x08;   // action turn on TX & RX amplifiers only when transmitting & receiving
+	private static final int RF_ANT_POWER_ENABLE = 0x03;            			// action enable antenna power
+	private static final int RF_ANT_POWER_DISABLE = 0x04;            			// action disable antenna power
+
 	private ToggleButton button_Xmit, button_Listen;
 	private Button button_Clear_Data;
 	private TextView dataDisplayResultTextView, frequencyTextView, modulationTextView, dataRateTextView;
@@ -195,6 +206,9 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 				// RX Setup phase - once
 				ongoingRadioTask = RadioTask.RADIO_RX;
 
+				// Set power Amplifiers
+				GollumDongle.getInstance(getActivity()).rfTxRxPowerAmpAction(0, RF_RX_POWER_AMPLIFIER_ACTION_ON_RX);
+
 				// Use rxSetup() version which is executed in the same context, not background task
 				GollumDongle.getInstance(getActivity()).rxSetup(freq, mod, drate, frameLength, CHANNEL_FILTER_BANDWIDTH_HZ, deviation);
 
@@ -224,6 +238,9 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 			} else if (RxTx[0] == RadioTask.RADIO_TX) {
 				// TX Setup phase - once
 				ongoingRadioTask = RadioTask.RADIO_TX;
+
+				// Set power Amplifiers
+				GollumDongle.getInstance(getActivity()).rfTxRxPowerAmpAction(0, RF_TX_POWER_AMPLIFIER_ACTION_ON_TX);
 
 				GollumDongle.getInstance(getActivity()).txSetup(freq, mod, drate, deviation);
 
