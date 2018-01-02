@@ -2326,7 +2326,7 @@ class USBDongle:
         if (level == 3):
             self.setMdmSyncMode(SYNCM_CARRIER_16_of_16)
         elif (level == 2):
-            self.setMdmSyncMode(SYNCM_15_of_16)
+            self.setMdmSyncMode(SYNCM_CARRIER_15_of_16)
         elif (level == 1):
             self.setMdmSyncMode(SYNCM_CARRIER)
         else:
