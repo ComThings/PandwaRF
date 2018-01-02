@@ -50,6 +50,19 @@ RF_TX_RX_POWER_AMPLIFIER_ACTION_ON_TX_RX = 0x08   # action turn on TX & RX ampli
 RF_ANT_POWER_ENABLE = 0x03                        # action enable antenna power
 RF_ANT_POWER_DISABLE = 0x04                       # action disable antenna power
 
+
+RFAMPMODES = {
+    RF_POWER_AMPLIFIERS_ACTION_ALL_OFF: "RF_POWER_AMPLIFIERS_ACTION_ALL_OFF",
+    RF_TX_POWER_AMPLIFIER_ACTION_ON: "RF_TX_POWER_AMPLIFIER_ACTION_ON",
+    RF_RX_POWER_AMPLIFIER_ACTION_ON: "RF_RX_POWER_AMPLIFIER_ACTION_ON",
+    RF_TX_RX_POWER_AMPLIFIER_ACTION_ON: "RF_TX_RX_POWER_AMPLIFIER_ACTION_ON",
+    RF_TX_POWER_AMPLIFIER_ACTION_ON_TX: "RF_TX_POWER_AMPLIFIER_ACTION_ON_TX",
+    RF_RX_POWER_AMPLIFIER_ACTION_ON_RX: "RF_RX_POWER_AMPLIFIER_ACTION_ON_RX",
+    RF_TX_RX_POWER_AMPLIFIER_ACTION_ON_TX_RX: "RF_TX_RX_POWER_AMPLIFIER_ACTION_ON_TX_RX",
+    RF_ANT_POWER_ENABLE: "RF_ANT_POWER_ENABLE",
+    RF_ANT_POWER_DISABLE: "RF_ANT_POWER_DISABLE",
+}
+
 # Data rate measurement
 USB_DATARATE_MEAS_WAIT_MS = 100
 DATARATE_MEAS_OCC_THRESHOLD_DEFAULT = 100
@@ -187,7 +200,9 @@ class GollumDongle(USBDongle):
         '''
         get the amplifier mode (RF amp external to CC1111)
         '''
-        return self.send(APP_RF, SYS_CMD_RF_GET_TXRX_POWER_AMP_MODE, "")
+        data = self.send(APP_RF, SYS_CMD_RF_GET_TXRX_POWER_AMP_MODE, "")
+        ampMode, = struct.unpack("B", data[0])
+        return ampMode
 
     def sendJammingStart(self, freqStart=433000000, freqStop=434000000, dataRate=250000, modulation=MODULATION_ASK_OOK):
         '''
@@ -363,3 +378,21 @@ class GollumDongle(USBDongle):
         sys.stdin.read(1)  # remove extra input char
 
         self.sendBruteForceStop()
+
+    # Override printRadioConfig from class USBDongle in cc1111client.py
+    def printRadioConfig(self, mhz=24, radiocfg=None):
+        output = []
+        output.append(USBDongle.reprRadioConfig(self, mhz, radiocfg))
+
+        output.append("== RX/TX Amplifiers Configuration ==")
+        output.append(self.reprRxTxAmplifiersConfig())
+
+        print "\n".join(output)
+
+    def reprRxTxAmplifiersConfig(self):
+        output = []
+        ampMode = self.getAmpMode()
+
+        output.append("Amplifier Mode:      %d: %s" % (ampMode, RFAMPMODES[ampMode]))
+
+        return "\n".join(output)
