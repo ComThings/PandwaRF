@@ -1322,7 +1322,7 @@ class USBDongle:
                 output.append("Firmware rev:        Not found! Update needed!")
         else:
             fwVersion = self.getFwVersion()
-            output.append("Firmware rev:        %s" % fwVersion)
+            output.append("Firmware rev:        %s (cf. https://github.com/ComThings/PandwaRF/wiki/Firmware-Releases-CC1111)" % fwVersion)
 
         # see if we have a bootloader by loooking for it's recognition semaphores
         # in SFR I2SCLKF0 & I2SCLKF1
