@@ -189,11 +189,11 @@ class GollumDongle(USBDongle):
         '''
         return self.send(APP_RF, SYS_CMD_RF_GET_TXRX_POWER_AMP_MODE, "")
 
-    def sendJammingStart(self, freq=433920000, dataRate=10000, modulation=MODULATION_ASK_OOK):
+    def sendJammingStart(self, freqStart=433000000, freqStop=434000000, dataRate=250000, modulation=MODULATION_ASK_OOK):
         '''
         requests the CC1111 to perform a RF jamming
         '''
-        r, t = self.send(APP_RF, SYS_CMD_RF_START_JAMMING, struct.pack("<IIB", freq, dataRate, modulation))
+        r, t = self.send(APP_RF, SYS_CMD_RF_START_JAMMING, struct.pack("<IIBI", freqStart, dataRate, modulation, freqStop))
 
     def sendJammingStop(self):
         '''
@@ -201,13 +201,13 @@ class GollumDongle(USBDongle):
         '''
         r, t = self.send(APP_RF, SYS_CMD_RF_STOP_JAMMING, "")
 
-    def doJamming(self, freq=433920000, dataRate=10000, modulation=MODULATION_ASK_OOK):
+    def doJamming(self, freqStart=433000000, freqStop=434000000, dataRate=250000, modulation=MODULATION_ASK_OOK):
         '''
         starts RF jamming
         '''
         print "Entering RF jamming mode..."
 
-        self.sendJammingStart(freq, dataRate, modulation)
+        self.sendJammingStart(freqStart, freqStop, dataRate, modulation)
 
         raw_input("press Enter to stop")
 
