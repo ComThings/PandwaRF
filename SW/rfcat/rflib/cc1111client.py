@@ -316,6 +316,13 @@ class USBDongle:
         self.resetup(copyDongle=copyDongle)
         self.max_packet_size = RF_MAX_RX_BLOCK
 
+    def printDeviceList(self):
+        try:
+            for dev in getRfCatDevices():
+                print "Found Device: VID/PID: %04x/%04x, %s, %s, serial: %s" % (dev.idVendor, dev.idProduct, dev.dev.manufacturer, dev.dev.product, dev.dev.serial_number)
+        except Exception, e:
+            if self._debug: print >>sys.stderr,"Error in get device list '%s'" % (e)
+
     def cleanup(self):
         self._usberrorcnt = 0;
         self.recv_queue = ''
@@ -368,6 +375,7 @@ class USBDongle:
                     do = dev.open()
                     iSN = do.getDescriptor(1,0,50)[16]
                     devnum = dev.devnum
+                    #print "Found Device: VID/PID: %04x/%04x, %s, %s, serial: %s" % (dev.idVendor, dev.idProduct, dev.dev.manufacturer, dev.dev.product, dev.dev.serial_number)
                     dongles.append((devnum, dev, do))
 
         dongles.sort()
