@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap 3, from LayoutIt!</title>
+    <title>PandwaRF Android API</title>
 
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
@@ -38,6 +38,116 @@
 		</div>
 	</div>
 
+  <!--API v0.9.3-->
+	<div class="row">
+		<div class="col-md-2">
+			<h3 class="text-primary">
+						API v0.9.3
+			</h3>
+			<a href="v0.9.3\index.html"" class="btn btn-info" role="button">Go to API</a>
+		</div>
+		<div class="col-md-8">
+			<h4 class="text-primary">
+						API changes
+			</h4>
+			<ul>  
+        <li>add API to force Nordic nRF51 chipset into sleep mode</li>
+				<li>add API to reset nRF51 chipset</li>
+        <li>add API to set battery capacity</li>
+				<li>save RxTx data in hex string instead of string array</li>
+        <li>update TxConfig and RxTxConfig classes</li>
+				<li>regroup hex String <-> byte array conversion function to Hex class</li>
+        <li>skip device when non Gollum USB device detected</li>                                
+			</ul>
+		</div>	
+	</div>
+	
+	  <!--API v0.9.2-->
+	<div class="row">
+		<div class="col-md-2">
+			<h3 class="text-primary">
+						API v0.9.2
+			</h3>
+			<!--Removed API button because not published-->
+			<p class="text-primary">API not published</p>
+		</div>
+		<div class="col-md-8">
+			<h4 class="text-primary">
+						API changes
+			</h4>
+			<ul>
+        <li>rename firmwareUpdateCC1111() to updateFirmwareCC1111() for alignment</li>                                
+			</ul>
+		</div>	
+	</div>
+	
+	  <!--API v0.9.1-->
+	<div class="row">
+		<div class="col-md-2">
+			<h3 class="text-primary">
+						API v0.9.1
+			</h3>
+			<!--Removed API button because not published-->
+			<p class="text-primary">API not published</p>
+		</div>
+		<div class="col-md-8">
+			<h4 class="text-primary">
+						API changes
+			</h4>
+			<ul>   
+				<li>add API to set NPI timeout values</li>
+        <li>return bond procedure status in clearBondDevice()</li>                                
+			</ul>
+		</div>	
+	</div>
+	
+	  <!--API v0.9.0-->
+	<div class="row">
+		<div class="col-md-2">
+			<h3 class="text-primary">
+						API v0.9.0
+			</h3>
+			<!--Removed API button because not published-->
+			<p class="text-primary">API not published</p>
+		</div>
+		<div class="col-md-8">
+			<h4 class="text-primary">
+						API changes
+			</h4>
+			<ul>   
+        <li>make RF link nuke function execute in parallel of other tasks</li>                                         
+				<li>add onUnBonded(address) callback</li>
+        <li>add bond/unbond helpers methods</li>
+				<li>Do not consider setting power amps as a blocking RF task, as it is done asynchronously</li>
+        <li>use parallel AsyncTask to stop Specan</li>
+				<li>do not unpair all devices when searching new devices</li>
+        <li>add missing method to set retry mode over BUS config</li>
+				<li>add methods to set HW revision over BUS config</li>
+        <li>pass BLE MAC address in parameter when sending onDeviceConnecting/Ready/Disconnecting/Disconnected/LinkLoss event</li>                                
+			</ul>
+		</div>	
+	</div>
+	
+	  <!--API v0.8.5-->
+	<div class="row">
+		<div class="col-md-2">
+			<h3 class="text-primary">
+						API v0.8.5
+			</h3>
+			<!--Removed API button because not published-->
+			<p class="text-primary">API not published</p>
+		</div>
+		<div class="col-md-8">
+			<h4 class="text-primary">
+						API changes
+			</h4>
+			<ul>
+				<li>mark Sub1GHzRfTransceiverSocket as deprecated</li>
+        <li>update to nRF toolbox v1.0.3</li>                       
+			</ul>
+		</div>	
+	</div>
+	
 	<!--API v0.8.4-->
 	<div class="row">
 		<div class="col-md-2">
