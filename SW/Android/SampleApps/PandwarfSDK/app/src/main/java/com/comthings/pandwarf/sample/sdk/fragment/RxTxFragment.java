@@ -18,9 +18,10 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
+import com.comthings.gollum.api.gollumandroidlib.GollumException;
 import com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger;
 import com.comthings.gollum.api.gollumandroidlib.common.Common;
-import com.comthings.gollum.api.gollumandroidlib.utils.Utils;
+import com.comthings.gollum.api.gollumandroidlib.utils.Hex;
 import com.comthings.pandwarf.sample.sdk.R;
 import com.sdsmdg.tastytoast.TastyToast;
 
@@ -185,7 +186,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 	public void displayReceivedData() {
 		getActivity().runOnUiThread(new Runnable() {
 			public void run() {
-				final String bufferHexString = Utils.byteArrayToHexString(bufferHex, rx_size);
+				final String bufferHexString = Hex.byteArrayToHexString(bufferHex, rx_size);
 				dataDisplayResultTextView.append(bufferHexString);
 			}
 		});
@@ -207,7 +208,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 				ongoingRadioTask = RadioTask.RADIO_RX;
 
 				// Set power Amplifiers
-				GollumDongle.getInstance(getActivity()).rfTxRxPowerAmpAction(0, RF_RX_POWER_AMPLIFIER_ACTION_ON_RX);
+				GollumDongle.getInstance(getActivity()).rfSetTxRxPowerAmp(0, RF_RX_POWER_AMPLIFIER_ACTION_ON_RX);
 
 				// Use rxSetup() version which is executed in the same context, not background task
 				GollumDongle.getInstance(getActivity()).rxSetup(freq, mod, drate, frameLength, CHANNEL_FILTER_BANDWIDTH_HZ, deviation);
@@ -240,7 +241,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 				ongoingRadioTask = RadioTask.RADIO_TX;
 
 				// Set power Amplifiers
-				GollumDongle.getInstance(getActivity()).rfTxRxPowerAmpAction(0, RF_TX_POWER_AMPLIFIER_ACTION_ON_TX);
+				GollumDongle.getInstance(getActivity()).rfSetTxRxPowerAmp(0, RF_TX_POWER_AMPLIFIER_ACTION_ON_TX);
 
 				GollumDongle.getInstance(getActivity()).txSetup(freq, mod, drate, deviation);
 
@@ -265,7 +266,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 				rxDone = true;
 				GollumDongle.getInstance(getActivity()).rxStop(new GollumCallbackGetInteger() {
 					@Override
-					public void done(int result) {
+					public void done(int result, GollumException e) {
 						button_Listen.setChecked(false);
 					}
 				});

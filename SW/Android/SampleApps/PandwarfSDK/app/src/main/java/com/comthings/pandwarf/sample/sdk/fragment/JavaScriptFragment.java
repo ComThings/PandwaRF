@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
+import com.comthings.gollum.api.gollumandroidlib.GollumException;
 import com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger;
 import com.comthings.gollum.api.gollumandroidlib.events.JavaScriptConsoleLogEvent;
 import com.comthings.pandwarf.sample.sdk.R;
@@ -121,7 +122,7 @@ public class JavaScriptFragment extends Fragment implements View.OnClickListener
 			// Start the magic
 			GollumDongle.getInstance(getActivity()).sendJsFile(DONGLE_ID, gollumJavaScriptFile.absoluteGollumJsPath, new GollumCallbackGetInteger() {
 				@Override
-				public void done(int result) {
+				public void done(int result, GollumException e) {
 					if (result < 0) {
 						TastyToast.makeText(getActivity(), "error", TastyToast.LENGTH_LONG, TastyToast.ERROR);
 						mButtonJsRunScript.setChecked(false);

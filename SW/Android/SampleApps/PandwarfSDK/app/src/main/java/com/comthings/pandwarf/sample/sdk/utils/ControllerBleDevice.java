@@ -105,11 +105,11 @@ public class ControllerBleDevice extends Observable implements GollumBleManagerC
 	}
 
 	@Override
-	public void onDeviceConnecting() {
+	public void onDeviceConnecting(String address) {
 	}
 
 	@Override
-	public void onDeviceConnected(String s) {
+	public void onDeviceConnected(String address) {
 		HashMap<String, Object> data = new HashMap<String, Object>();
 		data.put("action", "onDeviceConnected");
 
@@ -118,11 +118,11 @@ public class ControllerBleDevice extends Observable implements GollumBleManagerC
 	}
 
 	@Override
-	public void onDeviceDisconnecting() {
+	public void onDeviceDisconnecting(String address) {
 	}
 
 	@Override
-	public void onDeviceDisconnected() {
+	public void onDeviceDisconnected(String address) {
 
 		HashMap<String, Object> data = new HashMap<String, Object>();
 		data.put("action", "onDeviceDisconnected");
@@ -132,7 +132,7 @@ public class ControllerBleDevice extends Observable implements GollumBleManagerC
 	}
 
 	@Override
-	public void onLinklossOccur() {
+	public void onLinklossOccur(String address) {
 	}
 
 	@Override
@@ -140,7 +140,7 @@ public class ControllerBleDevice extends Observable implements GollumBleManagerC
 	}
 
 	@Override
-	public void onDeviceReady() {
+	public void onDeviceReady(String address) {
 
 		HashMap<String, Object> data = new HashMap<String, Object>();
 		data.put("action", "onDeviceReady");
@@ -163,12 +163,17 @@ public class ControllerBleDevice extends Observable implements GollumBleManagerC
 	}
 
 	@Override
-	public void onBondingRequired() {
+	public void onBondingRequired(String address) {
 
 	}
 
 	@Override
-	public void onBonded() {
+	public void onBonded(String address) {
+
+	}
+
+	@Override
+	public void onUnBonded(String address) {
 
 	}
 

@@ -12,8 +12,9 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.comthings.gollum.api.gollumandroidlib.GollumDongle;
+import com.comthings.gollum.api.gollumandroidlib.GollumException;
 import com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger;
-import com.comthings.gollum.api.gollumandroidlib.utils.Utils;
+import com.comthings.gollum.api.gollumandroidlib.utils.Hex;
 import com.comthings.pandwarf.sample.sdk.R;
 import com.sdsmdg.tastytoast.TastyToast;
 
@@ -85,7 +86,7 @@ public class SpecAnalyzerFragment extends Fragment {
 					mHandler.removeCallbacks(mRefreshTimer);
 					GollumDongle.getInstance(getActivity()).rfSpecanStop(0, new GollumCallbackGetInteger() {
 						@Override
-						public void done(int integer) {
+						public void done(int integer, GollumException e) {
 						}
 					});
 				}
@@ -113,7 +114,7 @@ public class SpecAnalyzerFragment extends Fragment {
 		textView.setText("");
 		GollumDongle.getInstance(getActivity()).rfSpecanStart(0, basefreqHz, channelIncrementHz, numChannels, DEFAULT_SPECAN_REFRESH_RATE_MILLIS, new GollumCallbackGetInteger() {
 			@Override
-			public void done(int integer) {
+			public void done(int integer, GollumException e) {
 				// Warning: you are responsible for calling rfSpecanGetRssi() in background thread and update the results in UI thread.
 				// Below code is only for demo
 				mRefreshTimer = new Runnable() {
@@ -125,7 +126,7 @@ public class SpecAnalyzerFragment extends Fragment {
 							int numRssiMeas = GollumDongle.getInstance(getActivity()).rfSpecanGetRssi(rssi_buffer, numChannels);
 							if (numRssiMeas == numChannels) {
 								if (rssi_buffer.length == numChannels) {
-									textView.append(Utils.byteArrayToHexString(rssi_buffer) + "\n");
+									textView.append(Hex.byteArrayToHexString(rssi_buffer) + "\n");
 								}
 							}
 							mHandler.postDelayed(this, DEFAULT_SPECAN_REFRESH_RATE_MILLIS);
