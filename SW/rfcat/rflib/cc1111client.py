@@ -135,6 +135,7 @@ ASK , and OOK is only supported for data rate up until 250 kBaud. MSK
 cannot be used if Manchester encoding/decoding is enabled.
 """
 MOD_2FSK                        = 0x00
+MOD_4FSK                        = 0x40
 MOD_GFSK                        = 0x10
 MOD_ASK_OOK                     = 0x30
 MOD_MSK                         = 0x70
@@ -142,10 +143,12 @@ MANCHESTER                      = 0x08
 
 MODULATIONS = {
         MOD_2FSK    : "2FSK",
+        MOD_4FSK    : "4FSK",
         MOD_GFSK    : "GFSK",
         MOD_ASK_OOK : "ASK/OOK",
         MOD_MSK     : "MSK",
         MOD_2FSK | MANCHESTER    : "2FSK/Manchester encoding",
+        MOD_4FSK | MANCHESTER    : "4FSK/Manchester encoding",
         MOD_GFSK | MANCHESTER    : "GFSK/Manchester encoding",
         MOD_ASK_OOK | MANCHESTER : "ASK/OOK/Manchester encoding",
         MOD_MSK  | MANCHESTER    : "MSK/Manchester encoding",
