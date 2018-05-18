@@ -1,0 +1,9 @@
+com.comthings.gollum.api.gollumandroidlib
+com.comthings.gollum.api.gollumandroidlib.ble
+com.comthings.gollum.api.gollumandroidlib.callback
+com.comthings.gollum.api.gollumandroidlib.common
+com.comthings.gollum.api.gollumandroidlib.events
+com.comthings.gollum.api.gollumandroidlib.parameters
+com.comthings.gollum.api.gollumandroidlib.protocol
+com.comthings.gollum.api.gollumandroidlib.usb
+com.comthings.gollum.api.gollumandroidlib.utils
