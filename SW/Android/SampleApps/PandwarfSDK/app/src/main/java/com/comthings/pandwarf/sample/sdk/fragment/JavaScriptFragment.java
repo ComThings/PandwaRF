@@ -31,8 +31,6 @@ import java.io.IOException;
 
 import de.greenrobot.event.EventBus;
 
-;
-
 
 /**
  * A simple {@link Fragment} subclass.
