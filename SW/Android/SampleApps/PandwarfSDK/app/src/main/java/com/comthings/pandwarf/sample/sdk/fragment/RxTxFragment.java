@@ -246,7 +246,7 @@ public class RxTxFragment extends Fragment implements OnClickListener {
 				GollumDongle.getInstance(getActivity()).txSetup(freq, mod, drate, deviation);
 
 				// TX phase - once
-				GollumDongle.getInstance(getActivity()).txSend(dataBuffer.getBytes(), dataBuffer.getBytes().length / 2, true);
+				GollumDongle.getInstance(getActivity()).txSend(dataBuffer.getBytes(), dataBuffer.getBytes().length / 2, true, 1);
 			}
 
 			return null;
