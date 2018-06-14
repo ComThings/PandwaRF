@@ -10,8 +10,8 @@ It is based on the well-known RfCat & Yard Stick One tools with the Texas Instru
 * [PandwaRF forum](http://pandwarf.boards.net/)
 * [PandwaRF chat](https://gitter.im/ComThings/Lobby)
 
-<a href='http://pandwarf.com/' target='_blank'><img src='https://s6.postimg.org/oz1w3ghbl/Gollum_RF_becomes_Pandwa_RF.jpg' border='0' alt='GollumRF becomes PandwaRF'/>
+<a href='http://pandwarf.com/' target='_blank'><img src='https://github.com/ComThings/PandwaRF/blob/master/resources/Gollum_RF_becomes_Pandwa_RF.jpg' border='0' alt='GollumRF becomes PandwaRF'/>
 
 
 <a href='https://play.google.com/store/apps/details?id=com.comthings.pandwarf' target='_blank'>
-<img src='https://s6.postimg.org/98gt9ty29/google_play_badge.png' border='0' alt='PandwaRF google-play-badge'/>
+<img src='https://github.com/ComThings/PandwaRF/blob/master/resources/google-play-badge.png' border='0' alt='PandwaRF google-play-badge'/>
