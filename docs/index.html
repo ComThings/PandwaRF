@@ -38,6 +38,37 @@
 		</div>
 	</div>
 
+  <!--API v0.9.10-->
+	<div class="row">
+		<div class="col-md-2">
+			<h3 class="text-primary">
+						API v0.9.10
+			</h3>
+			<a href="v0.9.10\index.html"" class="btn btn-info" role="button">Go to API</a>
+		</div>
+		<div class="col-md-8">
+			<h4 class="text-primary">
+						API changes - Thu, 14 June 2018
+			</h4>
+			<ul>  
+        <li>disable Fabric in non-release builds (debug or sdk)</li>
+        <li>nrftoolbox: update to v1.0.11</li>
+        <li>add/remove missing/un-needed dependencies</li>
+        <li>use ReLinker for native library loading</li>
+        <li>load native libraries in Sub1GHzRfTransceiver constructor</li>
+        <li>do not load C++ runtime library from Java</li>
+        <li>NDK build: increase minimum API level for native library support to API level 18</li>
+        <li>move Fabric/Crashlytics initialization to Gollum Lib</li>
+        <li>add methods to scan BLE devices for variable duration</li>
+        <li>use same xxxSdkVersion and supportLibraryVersion for all Gollum Android modules</li>
+        <li>add missing status callbacks in updateFirmwareNordic()</li>
+        <li>fix repeat value in saveButtonConfigInFlash function for CC1111</li>        
+        <li>trace all PandwaRF not connected as errors in API calls</li>
+        <li>clarify some comments for Nordic DFU methods</li>                                   
+			</ul>
+		</div>	
+	</div>
+	
   <!--API v0.9.8-->
 	<div class="row">
 		<div class="col-md-2">
