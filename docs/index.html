@@ -38,6 +38,39 @@
 		</div>
 	</div>
 
+  <!--API v0.9.11-->
+	<div class="row">
+		<div class="col-md-2">
+			<h3 class="text-primary">
+						API v0.9.11
+			</h3>
+			<a href="v0.9.11\index.html"" class="btn btn-info" role="button">Go to API</a>
+		</div>
+		<div class="col-md-8">
+			<h4 class="text-primary">
+						API changes - Fri, 06 July 2018
+			</h4>
+			<ul>  
+      	<li>nrftoolbox: use current useTxFifoQueue value when enqueing Request</li>
+      	<li>add CC1111 FW update APIs with hex file and path</li>
+      	<li>consolidate Files utils into single Lib class</li>
+      	<li>add parameter to enqueue all TX packets into a FIFO queue (default) or use single packet transmission (fallback)</li>
+      	<li>CC1111 FW update: add a fine progress callback to be notified when a packet has been sent</li>
+      	<li>CC1111 FW update: use BLE write with Ack when sending pages</li>
+      	<li>nrftoolbox: do not block TX queue in wait() if no Request was sent</li>
+      	<li>nrftoolbox: use ConcurrentLinkedQueue offer() instead of add() for TX queue</li>
+      	<li>Jamming Detection: add Start, Stop and Result methods</li>
+      	<li>split offline mode into backend/analytics/crash report modes</li>
+      	<li>force Dongle state to free when device disconnects</li>
+      	<li>add traces when loading native libraries</li>
+      	<li>force offline mode in sdk build type</li>
+      	<li>nrftoolbox: fix IllegalStateException in stopScan() when BT Adapter is not turned ON</li>
+      	<li>Use the new gradle dependency configurations</li>
+      	<li>update targetSdkVersion to target API level 24</li>                           
+			</ul>
+		</div>	
+	</div>
+	
   <!--API v0.9.10-->
 	<div class="row">
 		<div class="col-md-2">
