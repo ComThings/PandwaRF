@@ -1,3 +1,6 @@
+[![Maven Version](https://img.shields.io/maven-metadata/v/http/mymavenrepo.com/repo/l8uzsKQuWwYGByPmlbZ4/com/comthings/pandwarf/nrftoolbox/maven-metadata.xml.svg) nrftoolbox](https://mymavenrepo.com/repo/l8uzsKQuWwYGByPmlbZ4/com/comthings/pandwarf/nrftoolbox/) | 
+[![Maven Version](https://img.shields.io/maven-metadata/v/http/mymavenrepo.com/repo/l8uzsKQuWwYGByPmlbZ4/com/comthings/pandwarf/gollum/maven-metadata.xml.svg) gollum](https://mymavenrepo.com/repo/l8uzsKQuWwYGByPmlbZ4/com/comthings/pandwarf/gollum/)
+
 [PandwaRF](http://pandwarf.com/) ([formerly GollumRF](http://gollumrf.com/news/no-more-gollumrf/)) is a RF analysis tool with a sub-1 GHz wireless transceiver controlled by a smartphone or a PC.
 Its purpose is to capture, display & transmit RF data very easily.
 It can be connected to an Android smartphone using BLE or USB, and to Linux using USB.
