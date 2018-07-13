@@ -38,6 +38,37 @@
 		</div>
 	</div>
 
+  <!--API v0.9.12-->
+	<div class="row">
+		<div class="col-md-2">
+			<h3 class="text-primary">
+						API v0.9.12
+			</h3>
+			<a href="v0.9.12\index.html"" class="btn btn-info" role="button">Go to API</a>
+		</div>
+		<div class="col-md-8">
+			<h4 class="text-primary">
+						API changes - Fri, 06 July 2018
+			</h4>
+			<ul>  
+        <li>improve javadoc for GollumDongle API (CC1111 FW update) and readability</li>
+        <li>nrftoolbox: close() and disconnect() BluetoothGatt upon unexpected BLE disconnect</li>
+        <li>nrftoolbox: fix crash when unregistering non registered receivers</li>
+        <li>nrftoolbox: fix NPE when destroying BleManager</li>
+        <li>update some deprecated method javadoc</li>
+        <li>nrftoolbox: clean RSSI measurement timer</li>
+        <li>nrftoolbox: add trace when trying to connect with BT off</li>
+        <li>nrftoolbox: detect BLE service restart on Samsung Galaxy S5: after 10s of connection, the BT process restarts and the link is closed</li>
+        <li>CC1111 FW update: add security to avoid calling callback accidentally when watchdogTimer expires</li>
+        <li>start/stop CC1111 FW update timers from pre/post asynctask</li>
+        <li>nrftoolbox: use TRANSPORT_LE as preferred transport for GATT connections</li>
+        <li>nrftoolbox: add some traces for BLE adapter state</li>
+        <li>load C++ runtime library from Java (revert to pre 1.4.10 version)</li>
+        <li>init to offline mode by default</li>                      
+			</ul>
+		</div>	
+	</div>
+	
   <!--API v0.9.11-->
 	<div class="row">
 		<div class="col-md-2">
