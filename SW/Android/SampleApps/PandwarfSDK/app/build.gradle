@@ -35,8 +35,8 @@ dependencies {
 
     // Gollum Lib components
     implementation 'de.greenrobot:eventbus:2.4.1'
-    implementation 'com.comthings.pandwarf:nrftoolbox:1.0.11'
-    implementation 'com.comthings.pandwarf:gollum:0.9.9'
+    implementation 'com.comthings.pandwarf:nrftoolbox:1.0.13'
+    implementation 'com.comthings.pandwarf:gollum:0.9.12'
 
     // 3rd parties
     implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
