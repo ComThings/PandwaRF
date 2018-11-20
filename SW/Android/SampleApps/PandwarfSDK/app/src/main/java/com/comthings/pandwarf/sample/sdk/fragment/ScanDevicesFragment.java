@@ -1,13 +1,17 @@
 package com.comthings.pandwarf.sample.sdk.fragment;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +46,11 @@ import no.nordicsemi.android.nrftoolbox.scanner.ScannerListener;
 public class ScanDevicesFragment extends Fragment implements Observer {
 	private static final String TAG = "ScanFragment";
 	private static final int INVALID_DEVICE_POSITION = -1;
+
+	// PERMISSION
+	public static final int REQUEST_CODE_LOCATION_PERMISSIONS = 10;
+	String[] permissionsNeeded = new String[]{
+			Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION};
 
 	private View contentView;
 
@@ -163,8 +172,10 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 		// Inflate the layout for this com.comthingsdev.pandwarf.specAn.fragment
 		contentView = inflater.inflate(R.layout.fragment_scan, container, false);
 		Log.d(TAG, "onCreateView()");
+
 		initModel();
 		updateView();
+
 		progressBarScanDevices = (ProgressBar) contentView.findViewById(R.id.progressBar);
 		buttonScanDevices = (ToggleButton) contentView.findViewById(R.id.buttonScan);
 		buttonScanDevices.setChecked(false);
@@ -174,11 +185,10 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 			@Override
 			public void onClick(View buttonView) {
 				boolean isChecked = ((ToggleButton) buttonView).isChecked();
+				buttonScanDevices.setChecked(false);
 
 				if (isChecked) {
-					// Start BLE ScanDevicesFragment
-					scanForDevices();
-					checkBluetoothStatus(getActivity());
+					scanForDeviceWithPermissionRequest();
 				} else {
 					// Stop BLE ScanDevicesFragment
 					stopScanForDevices();
@@ -194,24 +204,36 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 		return contentView;
 	}
 
+    private void scanForDeviceWithPermissionRequest() {
+        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // Permission is not granted
+            // request the permission
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE_LOCATION_PERMISSIONS);
+        } else {
+            // Permission has already been granted
+            // Start BLE ScanDevicesFragment
+            scanForDevices();
+        }
+    }
+
 	@Override
 	public void onResume() {
 		Log.d(TAG, "onResume()");
 		super.onResume();
 	}
 
-	@Override
-	public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-		super.onActivityCreated(savedInstanceState);
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
-		Log.d(TAG, "onActivityCreated()");
+        Log.d(TAG, "onActivityCreated()");
 
-		// Make an initial ScanDevicesFragment as soon as the app start
-		final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-		if ((mBluetoothAdapter != null) && mBluetoothAdapter.isEnabled()) {
-			scanForDevices();
-		}
-	}
+        // Make an initial ScanDevicesFragment as soon as the app start
+        final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if ((mBluetoothAdapter != null) && mBluetoothAdapter.isEnabled()) {
+            scanForDeviceWithPermissionRequest();
+        }
+    }
 
 	private void updateView() {
 		//update the list
@@ -318,5 +340,21 @@ public class ScanDevicesFragment extends Fragment implements Observer {
 
 	private void onDeviceDisconnected() {
 		TastyToast.makeText(getActivity().getApplicationContext(), "Disconnected", TastyToast.LENGTH_SHORT, TastyToast.INFO);
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+		switch (requestCode) {
+			case REQUEST_CODE_LOCATION_PERMISSIONS: {
+				// If request is cancelled, the result arrays are empty.
+				if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+					// permission was granted
+					// Start BLE ScanDevicesFragment
+					scanForDevices();
+				}
+
+				return;
+			}
+		}
 	}
 }
