@@ -1,0 +1,83 @@
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceSetupFunctionParameters Class
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.events.BruteForceSetupFunctionParametersChangeEvent Class
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.events.BruteForceSetupLongSymbolParametersChangeEvent Class
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.events.BruteForceSetupParametersChangeEvent Class
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.events.BruteForceStartParametersChangeEvent Class
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.events.BruteForceStartSyncCodeTailParametersChangeEvent Class
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.utils.BusConfig Class
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.events.ChangeEvent Class
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.parameters.CheckParameters Class
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.parameters.DevicePattern Class
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.events.FrequencyChangeEvent Class
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.events.ModulationChangeEvent Class
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.utils.UtilsAndroidLib Class
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumErrorCode Constructor (com.comthings.gollum.api.gollumandroidlib.GollumErrorCode, java.lang.String)
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumErrorCode Constructor (int, java.lang.String)
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumException Constructor (com.comthings.gollum.api.gollumandroidlib.GollumErrorCode, java.lang.String)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method backendInitialize(Context, boolean, boolean, boolean)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method computeFrequencyOffsetCorrection(int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method consolePrint(java.lang.String)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.utils.Hex Method containsOnlyBits(java.lang.String)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.utils.Hex Method containsOnlyHex(java.lang.String)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method getCc1111BuildType()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method getCc1111RfRegisters()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method getCc1111SerialNumber(com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetString)
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method getGollumBle()
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method getGollumTrx()
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method getGollumUsb()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method getLastAppVersionCodeAvailableFromParseServer(com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method getLastVersionFirmwareCC1111(java.lang.String, java.lang.String, java.lang.String, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetGeneric<FirmwareCC1111>)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method getLastVersionFirmwareNordic(java.lang.String, java.lang.String, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetGeneric<FirmwareNordic>)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.utils.Hex Method invertBitString(java.lang.String)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method isDongleBusy()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceSetupLongSymbolParameters Method isValid()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceSetupParameters Method isValid()
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceStartParameters Method isValid()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceStartSyncCodeTailParameters Method isValid()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method pingAsync(byte[], com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method pingAsync(com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method pingAsyncInContext()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method pingAsyncInContext(byte[])
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method pingSync(byte[], com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetByteArray)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method pingSync(com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetByteArray)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method pingSyncInContext()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method pingSyncInContext(byte[])
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfBruteForceAttackGetStatusUpdate(int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfBruteForceAttackGetStatusUpdate(int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfDeBruijnGetStatusUpdate(int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfDeBruijnStart(int, int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfDeBruijnStop(int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfDeBruijnStop(int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfJammingReactiveStart(int, boolean[])
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfJammingReactiveStart(int, byte)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfJammingReactiveStart(int, byte, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rfJammingReactiveStop(int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rxListen(byte[], int, boolean)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method rxListen(byte[], int, boolean, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method send_0(int, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method send_1(int, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method sendByte(int, byte, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method sendStream(int, byte[], int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method setFrequency(int, int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method setNicEncodingMode(int, boolean, boolean)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method setNicEncodingMode(int, boolean, boolean, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method setTxInfiniteMode(int, boolean, int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method setTxInfiniteMode(int, boolean, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.utils.Version Method toVersionName(int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.utils.Hex Method tryParseIntToHex(java.lang.String)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method txSend(java.lang.String, boolean, int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method txSend(byte[], int, boolean, int)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method txSend(byte[], int, boolean, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method txSend(java.lang.String, boolean, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method usbScan()
+MISSING @SINCE TAG: com.comthings.gollum.api.gollumandroidlib.GollumDongle Method writeDelayBeforePowerOff(int)
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumErrorCode Field ERROR_BACKEND_FETCH_PARSE_CONFIG
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumErrorCode Field ERROR_MISSING_PARAMETER
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Field FREQUENCY_OFFSET_CORRECTION_PPM
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Field GOLLUM_ERROR_INVALID_PARAMETER
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Field GOLLUM_ERROR_NATIVE_LIB
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Field GOLLUM_ERROR_NOT_CONNECTED
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Field GOLLUM_ERROR_NOT_SUPPORTED
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Field NORDIC_AUTO_POWER_OFF_DISABLED
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Field NORDIC_AUTO_POWER_OFF_MAX_DELAY
+NO DOC BLOCK: com.comthings.gollum.api.gollumandroidlib.GollumDongle Field NORDIC_AUTO_POWER_OFF_MIN_DELAY

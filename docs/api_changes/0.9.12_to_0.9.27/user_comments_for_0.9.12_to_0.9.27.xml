@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<comments
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:noNamespaceSchemaLocation='comments.xsd'
+  name="0.9.12_to_0.9.27"
+  jdversion="1.1.1">
+
+<!-- This file contains comments for a JDiff report. -->
+<!-- It is used only in generating the report, and does not need to ship with the final report. -->
+
+<!-- The id attribute in an identifier element identifies the change as noted in the report. -->
+<!-- An id has the form package[.class[.[ctor|method|field].signature]], where [] indicates optional text. -->
+<!-- A comment element can have multiple identifier elements, which will -->
+<!-- will cause the same text to appear at each place in the report, but -->
+<!-- will be converted to separate comments when the comments file is used. -->
+<!-- HTML tags in the text field will appear in the report. -->
+<!-- You also need to close p HTML elements, used for paragraphs - see the top-level documentation. -->
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.FREQUENCY_OFFSET_CORRECTION_PPM"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.GOLLUM_ERROR_INVALID_PARAMETER"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.GOLLUM_ERROR_NATIVE_LIB"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.GOLLUM_ERROR_NOT_CONNECTED"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.GOLLUM_ERROR_NOT_SUPPORTED"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.GOLLUM_NOT_SUPPORTED"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.NORDIC_AUTO_POWER_OFF_DISABLED"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.NORDIC_AUTO_POWER_OFF_MAX_DELAY"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.NORDIC_AUTO_POWER_OFF_MIN_DELAY"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.backendInitialize_added(Context, boolean, boolean, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.computeFrequencyOffsetCorrection_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.consolePrint_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.execButton_changed(int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.getCc1111BuildType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.getCc1111RfRegisters_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.getCc1111SerialNumber_added(com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetString)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.getGollumBle_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.getGollumTrx_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.getGollumUsb_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.getLastAppVersionCodeAvailableFromParseServer_added(com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.getLastVersionFirmwareCC1111_added(java.lang.String, java.lang.String, java.lang.String, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetGeneric&lt;FirmwareCC1111&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.getLastVersionFirmwareNordic_added(java.lang.String, java.lang.String, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetGeneric&lt;FirmwareNordic&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.isDongleBusy_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.keeloq_dec_changed(byte[], byte[], com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetByteArray)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.keeloq_enc_changed(byte[], byte[], com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetByteArray)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.pingAsyncInContext_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.pingAsyncInContext_added(byte[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.pingAsync_added(byte[], com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.pingAsync_added(com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.pingInContext_removed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.pingSyncInContext_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.pingSyncInContext_added(byte[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.pingSync_added(byte[], com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetByteArray)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.pingSync_added(com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetByteArray)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.ping_removed(com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.readBatteryLevel_removed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfBruteForceAttackGetStatusUpdate_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfBruteForceAttackGetStatusUpdate_added(int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfBruteForceAttackStatusUpdate_removed(int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfDeBruijnGetStatusUpdate_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfDeBruijnStart_added(int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfDeBruijnStop_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfDeBruijnStop_added(int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfJammingReactiveStart_added(int, boolean[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfJammingReactiveStart_added(int, byte)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfJammingReactiveStart_added(int, byte, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rfJammingReactiveStop_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.runBootloader_changed(int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.runFirmware_changed(int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rxListen_added(byte[], int, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.rxListen_added(byte[], int, boolean, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.saveButtonConfigInFlash_changed(int, int, int, int, int, int, byte[], com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.sendByte_added(int, byte, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.sendStream_added(int, byte[], int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.send_0_added(int, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.send_1_added(int, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.setFrequency_added(int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.setNicEncodingMode_added(int, boolean, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.setNicEncodingMode_added(int, boolean, boolean, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.setTxInfiniteMode_added(int, boolean, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.setTxInfiniteMode_added(int, boolean, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.softResetChip_removed(int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.txSend_added(byte[], int, boolean, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.txSend_added(byte[], int, boolean, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.txSend_added(java.lang.String, boolean, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.txSend_added(java.lang.String, boolean, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.txSend_removed(byte[], int, boolean, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.txSend_removed(byte[], int, boolean, int, com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetInteger)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.usbScanAndOpen_changed(boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.usbScan_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeBatteryCapacity_changed(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeButtonPush_changed(byte[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeButtonPush_changed(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeDelayBeforePowerOff_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeDeviceName_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeForceSleepNordic_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeGetLastSelfTestResult_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeHwRevision_changed(byte[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeHwRevision_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeLoopBackMode_changed(boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeLoopBackMode_changed(byte[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeNotifBusConfig_changed(boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeNotifButtonPushed_changed(boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeNotifRXCharacteristic_changed(boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeResetCC1111_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeResetNordic_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeRunSelfTest_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeStateLed_changed(byte[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeStateLed_changed(int, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeTxRetryMode_changed(boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeTxRetryMode_changed(byte[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeUsbMode_changed(boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumDongle.writeUsbMode_changed(byte[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumErrorCode"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumErrorCode.ERROR_BACKEND_FETCH_PARSE_CONFIG"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumErrorCode.ERROR_MISSING_PARAMETER"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumErrorCode.ctor_added(com.comthings.gollum.api.gollumandroidlib.GollumErrorCode, java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumErrorCode.ctor_added(int, java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumException"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.GollumException.ctor_added(com.comthings.gollum.api.gollumandroidlib.GollumErrorCode, java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.callback"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetByteArray"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.callback.GollumCallbackGetByteArray.done_changed(byte[], com.comthings.gollum.api.gollumandroidlib.GollumException)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.duktape"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.events"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.events.BruteForceSetupFunctionParametersChangeEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.events.BruteForceSetupLongSymbolParametersChangeEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.events.BruteForceSetupParametersChangeEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.events.BruteForceStartParametersChangeEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.events.BruteForceStartSyncCodeTailParametersChangeEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.events.ChangeEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.events.FrequencyChangeEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.events.ModulationChangeEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.jni"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceSetupFunctionParameters"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceSetupLongSymbolParameters"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceSetupLongSymbolParameters.isValid_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceSetupParameters"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceSetupParameters.isValid_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceStartParameters"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceStartParameters.isValid_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceStartSyncCodeTailParameters"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.BruteForceStartSyncCodeTailParameters.isValid_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.CheckParameters"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.parameters.DevicePattern"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.protocol"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.BusConfig"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.Hex"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.Hex.containsOnlyBits_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.Hex.containsOnlyHex_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.Hex.invertBitString_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.Hex.tryParseIntToHex_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.Utils"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.UtilsAndroidLib"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.Version"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.comthings.gollum.api.gollumandroidlib.utils.Version.toVersionName_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+
+</comments>
