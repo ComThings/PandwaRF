@@ -1,0 +1,42 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.common/Common.RfAntennaMode///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/common/Common.RfAntennaMode.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.common/Common.RfPowerAmplifierMode///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/common/Common.RfPowerAmplifierMode.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.common/Common.RfStatus///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/common/Common.RfStatus.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.common/Common.RfTask///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/common/Common.RfTask.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.common/MarauderCommon.Command///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/common/MarauderCommon.Command.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.common/MarauderCommon.Result///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/common/MarauderCommon.Result.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.exceptions/GeneratedTxConfigNotFoundException.ErrorCode///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/exceptions/GeneratedTxConfigNotFoundException.ErrorCode.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.network.kaiju.api/JobInputMoreRollingCodes.RollingCodeAddition///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/network/kaiju/api/JobInputMoreRollingCodes.RollingCodeAddition.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.network.kaiju.device/DeviceInfo.Type///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/network/kaiju/device/DeviceInfo.Type.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.network.kaiju.device/RemoteInfoAbstract.ButtonInfo///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/network/kaiju/device/RemoteInfoAbstract.ButtonInfo.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.network.kaiju.device/RemoteInfoAbstract.RollingCodeEligibility///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/network/kaiju/device/RemoteInfoAbstract.RollingCodeEligibility.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.network.kaiju.device/RemoteInfoAbstract.RollingCodePredicat///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/network/kaiju/device/RemoteInfoAbstract.RollingCodePredicat.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.network.kaiju.device/RemoteInfoAbstract.SyncCounterInfo///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/network/kaiju/device/RemoteInfoAbstract.SyncCounterInfo.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.network.kaiju/GollumKaijuAbstract.PriorityRequest///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/network/kaiju/GollumKaijuAbstract.PriorityRequest.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.network.kaiju/RollingCode.Usability///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/network/kaiju/RollingCode.Usability.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/GollumGsonBuilderFactory.Companion///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/GollumGsonBuilderFactory.Companion.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/GollumMath.Companion///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/GollumMath.Companion.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/RegexAnalyzer.AnalysisResult///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/RegexAnalyzer.AnalysisResult.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/RegexAnalyzer.AnalyzeRequest.ExecutionMode///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/RegexAnalyzer.AnalyzeRequest.ExecutionMode.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/RegexAnalyzer.AnalyzeRequest///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/RegexAnalyzer.AnalyzeRequest.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/RegexAnalyzer.Device///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/RegexAnalyzer.Device.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/RxAsyncDataHelper.AnalysisRequest///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/RxAsyncDataHelper.AnalysisRequest.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/RxAsyncDataHelper.AnalysisResult///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/RxAsyncDataHelper.AnalysisResult.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/RxAsyncDataHelper.Subscriber///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/RxAsyncDataHelper.Subscriber.html
+$dokka.location:com.comthings.gollum.api.gollumandroidlib.utils/StreamHelper.GlitchRemovingResult///PointingToDeclaration/com/comthings/gollum/api/gollumandroidlib/utils/StreamHelper.GlitchRemovingResult.html
+com.comthings.gollum.api.gollumandroidlib
+com.comthings.gollum.api.gollumandroidlib.callback
+com.comthings.gollum.api.gollumandroidlib.common
+com.comthings.gollum.api.gollumandroidlib.duktape
+com.comthings.gollum.api.gollumandroidlib.events
+com.comthings.gollum.api.gollumandroidlib.exceptions
+com.comthings.gollum.api.gollumandroidlib.network.kaiju
+com.comthings.gollum.api.gollumandroidlib.network.kaiju.api
+com.comthings.gollum.api.gollumandroidlib.network.kaiju.device
+com.comthings.gollum.api.gollumandroidlib.network.kaiju.marauderSession
+com.comthings.gollum.api.gollumandroidlib.network.kaiju.models
+com.comthings.gollum.api.gollumandroidlib.parameters
+com.comthings.gollum.api.gollumandroidlib.usb
+com.comthings.gollum.api.gollumandroidlib.utils
+
