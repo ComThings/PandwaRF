@@ -11,7 +11,7 @@ It is based on the well-known RfCat & Yard Stick One tools with the Texas Instru
 # Communications channels
 * [PandwaRF wiki](https://github.com/ComThings/PandwaRF/wiki)
 * [PandwaRF forum](http://pandwarf.boards.net/)
-* [PandwaRF chat](https://gitter.im/ComThings/Lobby)
+* PandwaRF chat
 
 <a href='http://pandwarf.com/' target='_blank'><img src='https://github.com/ComThings/PandwaRF/blob/master/resources/Gollum_RF_becomes_Pandwa_RF.jpg' border='0' alt='GollumRF becomes PandwaRF'/>
 
